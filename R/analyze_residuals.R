@@ -127,7 +127,8 @@ plot_residual_hist <- function(data,
       x = "Résidu",
       y = "Effectif pondéré",
       title = "Distribution pondérée des résidus"
-    )
+    ) +
+    theme_publication()
 }
 
 plot_residuals_vs_euro <- function(residus_commune) {
@@ -142,5 +143,6 @@ plot_residuals_vs_euro <- function(residus_commune) {
       y = "Résidu communal pondéré",
       size = "Inscrits",
       title = "Sur- / sous-performance communale relative"
-    )
+    ) +
+    theme_publication()
 }

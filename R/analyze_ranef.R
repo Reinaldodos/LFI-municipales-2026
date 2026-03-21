@@ -128,7 +128,8 @@ plot_ranef_distribution <- function(re_all, effect_col = "intercept") {
       y = "Effet aléatoire communal",
       size = "Inscrits",
       title = "Distribution des effets aléatoires communaux"
-    )
+    ) +
+    theme_publication()
 }
 
 plot_top_ranef_communes <- function(re_all, n = 20, effect_col = "intercept") {
@@ -150,7 +151,8 @@ plot_top_ranef_communes <- function(re_all, n = 20, effect_col = "intercept") {
       y = "Effet aléatoire communal",
       size = "Inscrits",
       title = "Top communes en surperformance relative"
-    )
+    ) +
+    theme_publication()
 }
 
 plot_bottom_ranef_communes <- function(re_all, n = 20, effect_col = "intercept") {
@@ -172,5 +174,6 @@ plot_bottom_ranef_communes <- function(re_all, n = 20, effect_col = "intercept")
       y = "Effet aléatoire communal",
       size = "Inscrits",
       title = "Top communes en sous-performance relative"
-    )
+    ) +
+    theme_publication()
 }

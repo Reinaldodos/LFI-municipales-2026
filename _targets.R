@@ -74,6 +74,14 @@ list(
       euro_data = euro_data
     )
   ),
+  tar_target(
+    sample_info,
+    base_cf |>
+      summarise(
+        n_obs = n(),
+        n_communes = n_distinct(code_ville)
+      )
+  ),
 
   # -----------------------------
   # Branching statique sur les spécifications
@@ -96,6 +104,10 @@ list(
     tar_target(
       residual_summary,
       summarise_residuals(base_cf_resid)
+    ),
+    tar_target(
+      residual_summary_pretty,
+      format_residual_summary(residual_summary)
     ),
     tar_target(
       residual_summary_weighted,
@@ -129,6 +141,10 @@ list(
       summarise_ranef_tail_weights(re_all)
     ),
     tar_target(
+      ranef_tail_pretty,
+      format_ranef_tail(ranef_tail_weights)
+    ),
+    tar_target(
       top_communes,
       top_ranef_communes(re_all, n = top_n_target)
     ),
@@ -159,6 +175,14 @@ list(
     tar_target(
       p_bottom_ranef,
       plot_bottom_ranef_communes(re_all, n = top_n_target)
+    ),
+    tar_target(
+      publication_bundle,
+      list(
+        residuals = format_residual_summary(residual_summary),
+        ranef = format_ranef_tail(ranef_tail_weights),
+        plot_main = p_ranef_distribution
+      )
     )
   )
 )
