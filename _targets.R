@@ -63,6 +63,16 @@ list(
     euro_data,
     build_objects(euro_raw)
   ),
+  tar_target(
+    scores_lfi_commune,
+    build_scores_lfi_commune(
+      muni_data = muni_data
+    )
+  ),
+  tar_target(
+    p_intro_top_communes_lfi,
+    plot_intro_top_communes_lfi(scores_lfi_commune, n = 30)
+  ),
 
   # -----------------------------
   # Base contrefactuelle
@@ -81,6 +91,14 @@ list(
         n_obs = n(),
         n_communes = n_distinct(code_ville)
       )
+  ),
+  tar_target(
+    p_intro_compare_euro_muni,
+    plot_intro_compare_euro_muni(
+      scores_lfi_commune = scores_lfi_commune,
+      base_cf = base_cf,
+      n = 12
+    )
   ),
 
   # -----------------------------
