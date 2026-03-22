@@ -215,3 +215,59 @@ build_objects <- function(raw_data) {
     candidats_nuances = build_candidats_nuances(resultats, bureaux)
   )
 }
+
+fusion_SD <- function(raw_data) {
+  pierrefitte_raw <-
+    raw_data |>
+    filter(
+      `Code département` == "93",
+      str_detect(string = `Libellé commune`, pattern = "^Pierrefitte")
+    )
+
+  reste_raw <-
+    anti_join(
+      x = raw_data,
+      y = pierrefitte_raw,
+      by = join_by(`Code département`, `Code commune`, `Code BV`)
+    )
+
+  pierrefitte_raw |>
+    mutate(
+      `Code commune` =
+        case_match(
+          .x = `Code commune`,
+          .default = `Code commune`,
+          "93059" ~ "93066"
+        ),
+      `Libellé commune` =
+        case_match(
+          .x = `Libellé commune`,
+          .default = `Libellé commune`,
+          "Pierrefitte-sur-Seine" ~ "Saint-Denis"
+        ),
+      `Code BV` =
+        case_match(
+          .x = `Code BV`,
+          .default = `Code BV`,
+          "0001" ~ "0051",
+          "0002" ~ "0052",
+          "0003" ~ "0053",
+          "0004" ~ "0054",
+          "0005" ~ "0055",
+          "0006" ~ "0056",
+          "0007" ~ "0057",
+          "0008" ~ "0058",
+          "0009" ~ "0059",
+          "0010" ~ "0060",
+          "0011" ~ "0061",
+          "0012" ~ "0062"
+        )
+    ) |>
+    bind_rows(reste_raw)
+}
+
+build_objects_and_fusion_SD <- function(raw_data){
+  raw_data |>
+    fusion_SD() |>
+    build_objects()
+}

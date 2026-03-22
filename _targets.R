@@ -61,7 +61,7 @@ list(
   ),
   tar_target(
     euro_data,
-    build_objects(euro_raw)
+    build_objects_and_fusion_SD(euro_raw)
   ),
   tar_target(
     scores_lfi_commune,
