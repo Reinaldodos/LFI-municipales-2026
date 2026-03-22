@@ -27,9 +27,11 @@ euro_url <- "https://www.data.gouv.fr/api/1/datasets/r/cc1883d9-1265-4365-b754-f
 
 top_n <- 20
 
+liste_models <- c("A", "B", "C_full", "C_no_VIF", "C_ortho")
+
 model_grid <- tibble::tibble(
-  model_name = c("A", "B", "C_full", "C_parsimonious"),
-  formula_name = c("A", "B", "C_full", "C_parsimonious")
+  model_name = liste_models,
+  formula_name = liste_models
 )
 
 # =========================================================

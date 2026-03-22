@@ -7,24 +7,24 @@
 cf_formulas <- list(
   A = municipales_s ~
     europeennes_s +
-    (1 + europeennes_s || code_ville),
+    (1 + europeennes_s | code_ville),
   B = municipales_s ~
     europeennes_s +
     log_bureau_s + log_commune_s +
-    (1 + europeennes_s || code_ville),
+    (1 + europeennes_s | code_ville),
   C_full = municipales_s ~
-    europeennes_s +
-    gauche_euro_s +
-    dominance_LFI_euro_s +
+    europeennes_s + gauche_euro_s + dominance_LFI_euro_s +
     log_bureau_s + log_commune_s +
     europeennes_s:gauche_euro_s +
-    (1 + europeennes_s || code_ville),
-  C_parsimonious = municipales_s ~
-    europeennes_s +
-    gauche_euro_s +
-    dominance_LFI_euro_s +
+    (1 + europeennes_s | code_ville),
+  C_no_VIF = municipales_s ~
+    gauche_euro_s * dominance_LFI_euro_s +
     log_bureau_s + log_commune_s +
-    (1 + europeennes_s || code_ville)
+    (1 + europeennes_s | code_ville),
+  C_ortho = municipales_s ~
+    europeennes_s * gauche_orth +
+    log_bureau_s + log_commune_s +
+    (1 + europeennes_s | code_ville)
 )
 
 # =========================================================
