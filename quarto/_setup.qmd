@@ -1,0 +1,50 @@
+```{r}
+#| label: setup
+#| include: false
+
+library(targets)
+
+tar_config_set(
+  store = "../_targets"
+)
+
+library(tidyverse)
+
+# baseline retenue pour le texte principal
+model_suffix <- "A"
+
+get_object <- function(objet){
+  objet |>   
+    str_c(model_suffix, sep = "_") |> 
+    targets::tar_read_raw()
+}
+
+# intro
+p_intro_top <- tar_read(p_intro_top_communes_lfi)
+p_intro_compare <- tar_read(p_intro_compare_euro_muni)
+
+# modèle
+base_cf <- tar_read(base_cf)
+modele <- get_object(objet = "model_fit")
+
+# résidus
+residual_summary <- get_object("residual_summary_pretty")
+residual_summary_weighted <- get_object("residual_summary_weighted")
+p_residual_hist <- get_object("p_residual_hist")
+p_residuals_vs_euro <- get_object("p_residuals_vs_euro")
+
+# ranef
+ranef_summary <- get_object("ranef_summary")
+ranef_tail <- get_object("ranef_tail_pretty")
+p_ranef_distribution <- get_object("p_ranef_distribution")
+plot_intercept_slope <- get_object("plot_intercept_slope")
+p_top_ranef <- get_object("p_top_ranef")
+p_bottom_ranef <- get_object("p_bottom_ranef")
+
+# comparaisons de modèles
+model_A <- tar_read(model_fit_A)
+model_B <- tar_read(model_fit_B)
+model_C_full <- tar_read(model_fit_C_full)
+model_C_no_VIF <- tar_read(model_fit_C_no_VIF)
+model_C_ortho <- tar_read(model_fit_C_ortho)
+```

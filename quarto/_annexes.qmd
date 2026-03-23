@@ -1,0 +1,13 @@
+# Annexes
+
+## Comparaison des modèles
+
+[Éventuellement broom.mixed ici]
+
+## Robustesse
+
+[Texte]
+
+## Détails techniques
+
+[Optionnel : pipeline targets]

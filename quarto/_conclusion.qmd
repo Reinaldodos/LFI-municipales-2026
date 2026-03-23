@@ -1,0 +1,37 @@
+# Conclusion
+
+## Résultat principal
+
+L’analyse conduite dans ce travail visait à évaluer l’hypothèse d’une percée de La France insoumise aux élections municipales de 2026, en la confrontant à un contrefactuel construit à partir des résultats des élections européennes de 2024.
+
+Le modèle met en évidence **une relation positive et substantielle entre les deux scrutins**. Le niveau atteint par LFI aux européennes constitue donc un bon prédicteur de son niveau municipal. Toutefois, cette relation est partielle et fortement structurée par des effets communaux, à la fois en niveau et en intensité de conversion.
+
+L’examen des résidus du modèle constitue le test central de l’hypothèse étudiée. Or, ces résidus ne présentent ni décalage agrégé significatif, ni structure systématique en fonction du niveau initial du vote. Les écarts observés sont distribués de manière symétrique autour de zéro et relèvent d’une dispersion locale.
+
+[**Les résultats ne permettent pas de valider l’hypothèse d’une progression généralisée au-delà de ce que suggèrent déjà les résultats européens**]{.underline}. Le scrutin municipal apparaît globalement conforme à un scénario de prolongement, modéré et territorialisé, du vote observé deux ans plus tôt.
+
+## Lecture politique
+
+[**Ces résultats conduisent à nuancer le narratif d’une « percée » ou d’une « vague » nationale.**]{.underline}
+
+L’absence de surperformance agrégée indique que les performances municipales de LFI ne traduisent pas une dynamique autonome de progression. Elles s’inscrivent pour l’essentiel dans la continuité des rapports de force issus des européennes.
+
+Par ailleurs, l’hétérogénéité territoriale observée ne prend pas la forme d’une diffusion homogène du vote. Elle correspond à une concentration de communes combinant un niveau élevé et une forte intensité de conversion, tandis que d’autres territoires restent en retrait. **La dynamique observée est donc localisée et cumulative, plutôt que généralisée**.
+
+Dans ce cadre, les succès municipaux, parfois marqués, ne doivent pas être interprétés comme les manifestations d’un mouvement d’ensemble. Ils relèvent de configurations locales spécifiques, qui ne se traduisent pas par un déplacement global de la distribution des scores.
+
+[**Le terme de « vague » apparaît inadapté pour décrire la dynamique observée.**]{.underline} Il suggère une homogénéité et une diffusion que les données ne confirment pas.
+
+## Ouvertures
+
+Ce travail repose sur une approche volontairement parcimonieuse, centrée sur la relation entre deux scrutins et sur la structuration territoriale qui en découle. Si l’analyse a permis de mettre en évidence l’absence de dynamique agrégée et l’importance des configurations locales, plusieurs prolongements restent ouverts.
+
+Une première piste consiste à approfondir l’analyse des **mécanismes de conversion** du vote européen en vote municipal. Le modèle met en évidence des différences marquées entre communes dans l’intensité de cette relation, sans en identifier les déterminants. L’introduction de variables supplémentaires — sociologiques, institutionnelles ou liées à la structuration partisane — permettrait d’éclairer les facteurs associés à une conversion plus ou moins efficace.
+
+Une seconde extension concerne la **prise en compte plus explicite de la structure du scrutin municipal**. L’analyse s’est concentrée sur le premier tour et sur une relation directe entre niveaux électoraux, en laissant de côté des éléments tels que les alliances locales, les configurations de listes ou les dynamiques de second tour. Or, ces facteurs peuvent jouer un rôle déterminant dans la traduction du vote en résultats municipaux et contribuer à expliquer une partie de la dispersion observée.
+
+Une troisième piste porte sur le **raffinement du contrefactuel lui-même**. Le modèle retenu repose sur une spécification relativement simple, qui vise avant tout à tester l’existence d’un décalage global. Des approches plus riches — intégrant par exemple des covariables supplémentaires ou des structures hiérarchiques plus fines — permettraient de tester la robustesse des résultats et de mieux isoler les écarts réellement inexpliqués.
+
+Enfin, l’approche développée ici pourrait être étendue à d’autres séquences électorales, afin d’évaluer la **portée générale du cadre contrefactuel proposé**. Il serait notamment possible d’examiner si la relation observée entre élections intermédiaires et élections locales présente des régularités comparables dans d’autres contextes, ou si elle dépend fortement des configurations politiques propres à chaque période.
+
+Ces prolongements ne remettent pas en cause le résultat principal, mais en précisent les conditions d’interprétation : l’absence de « vague » agrégée ne clôt pas l’analyse, elle invite au contraire à déplacer l’attention vers les mécanismes et les configurations qui produisent l’hétérogénéité observée.

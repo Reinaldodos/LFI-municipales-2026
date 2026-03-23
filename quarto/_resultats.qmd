@@ -1,0 +1,63 @@
+# Résultats principaux
+
+L’ensemble de l’analyse repose désormais sur l’interprétation des résidus du modèle retenu. Ceux-ci mesurent, pour chaque unité d’observation, l’écart entre le score municipal observé et le score attendu compte tenu du niveau issu des élections européennes et de la structure territoriale estimée.
+
+Ces résidus constituent ainsi le cœur du dispositif contrefactuel. Ils permettent d’évaluer si les performances municipales traduisent une progression systématique par rapport à ce que laisseraient prévoir les résultats européens, ou si elles relèvent d’une simple dispersion autour d’un niveau attendu.
+
+## Résultats agrégés
+
+Le tableau des statistiques descriptives des résidus permet d’apprécier leur distribution globale. Si la moyenne des résidus est, par construction, nulle, cet indicateur est peu informatif. En revanche, la moyenne pondérée, qui tient compte du poids des observations, s’élève à environ 0.008.
+
+```{r}
+residual_summary_weighted |> gt::gt()
+```
+
+Cette valeur est faible. Elle indique que, une fois contrôlée la relation entre les deux scrutins ainsi que la structuration communale, le score municipal observé ne s’écarte pas de manière significative du score attendu à l’échelle agrégée.
+
+```{r}
+residual_summary |> gt::gt()
+```
+
+L’examen des quantiles confirme cette lecture. La médiane est proche de zéro et les différents seuils de la distribution ne font apparaître aucun déplacement global. La dispersion observée ne s’accompagne pas d’un décalage systématique vers des valeurs positives.
+
+Dans ces conditions, il n’apparaît pas de surperformance agrégée significative. Le contrefactuel ne met pas en évidence de progression d’ensemble au-delà de ce que suggèrent déjà les résultats européens.
+
+## Distribution des résidus
+
+L’histogramme pondéré des résidus permet de visualiser la structure de cette dispersion. La distribution est centrée sur zéro et présente une forme relativement symétrique, avec une forte concentration des observations autour de la moyenne et des queues plus fines.
+
+```{r}
+p_residual_hist
+```
+
+Ce profil est cohérent avec une situation où le modèle rend correctement compte de la majeure partie des observations, et où les écarts restants relèvent essentiellement de variations locales. On n’observe pas de déplacement de la distribution vers la droite qui signalerait une surperformance généralisée.
+
+La dispersion des résidus traduit donc une hétérogénéité réelle, mais cette hétérogénéité ne prend pas la forme d’une dynamique collective orientée.
+
+## Relation européenne / municipale
+
+Le graphique représentant les résidus en fonction du score LFI aux européennes permet d’examiner directement l’hypothèse d’une amplification dans les territoires déjà favorables.
+
+Si une dynamique de type « vague » était à l’œuvre, on s’attendrait à observer une relation positive entre le niveau initial et l’écart au contrefactuel, c’est-à-dire une tendance des résidus à augmenter avec le score aux européennes.
+
+```{r}
+p_residuals_vs_euro
+```
+
+Or, le nuage de points ne présente pas de structure identifiable. Les observations sont dispersées autour de zéro, sans pente apparente ni concentration particulière des résidus positifs dans les zones de score élevé.
+
+Ce résultat indique que les communes où LFI obtient des scores élevés aux européennes ne surperforment pas systématiquement aux municipales. La relation entre les deux scrutins ne se traduit pas par une amplification uniforme dans les territoires déjà favorables.
+
+## Interprétation
+
+Les résultats convergent vers une conclusion cohérente :
+
+-   il n’existe pas de progression agrégée significative une fois prise en compte la relation entre les deux scrutins. Le niveau municipal apparaît globalement conforme à ce que l’on peut attendre à partir du niveau européen.
+
+-   les écarts observés sont distribués de manière symétrique autour de zéro. Ils ne traduisent pas une dynamique collective, mais une dispersion de situations locales.
+
+-   cette dispersion n’est pas structurée par le niveau initial du vote. Les territoires les plus favorables ne présentent pas de surperformance systématique, ce qui exclut l’hypothèse d’une amplification homogène.
+
+Dans ce cadre, [**l'hypothèse d’une « vague » nationale ne trouve pas de support empirique**]{.underline}. La dynamique observée correspond plutôt à une agrégation de trajectoires locales différenciées, où coexistent des situations de surperformance et de sous-performance.
+
+Cette lecture ne nie pas l’existence de succès locaux, parfois marqués. Elle suggère toutefois que ces succès ne relèvent pas d’un mouvement général, mais de configurations territoriales spécifiques, dont l’analyse relève de l’hétérogénéité plutôt que d’une logique de diffusion uniforme.

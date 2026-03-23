@@ -1,0 +1,89 @@
+# Introduction
+
+## Une perception de vague électorale
+
+Les résultats des élections municipales de 2026 ont souvent été interprétés comme le signe d’une progression significative de La France insoumise (LFI). Cette lecture repose principalement sur la comparaison avec les élections municipales précédentes, qui fait apparaître des hausses de scores dans un certain nombre de communes.
+
+```{r}
+p_intro_top
+```
+
+Certains résultats ont été particulièrement visibles en raison de leur ampleur. La victoire dès le premier tour à Saint-Denis, la mise en ballotage du maire sortant à Lille, ou encore la prise de pouvoir sur l'électorat de gauche à Toulouse ont été les carburants de ce narratif de "vague LFI".
+
+## Un problème mal posé
+
+Cette interprétation soulève toutefois des difficultés, tant en termes de base de comparaison que de validité analytique.
+
+Tout d'abord, comparer directement les municipales de 2026 aux municipales antérieures revient à ignorer un fait élémentaire : les deux scrutins ne partagent ni les mêmes structures d’offre politique, ni les mêmes logiques de mobilisation.
+
+Un argument central tient au positionnement de LFI entre les deux cycles électoraux. En 2020, le mouvement a largement marginalisé l’échelon municipal dans sa stratégie, privilégiant un ancrage national structuré autour de la figure de son leader, qui qualifiait lui-même les élections municipales de « tambouille locale ». Cette orientation s’est traduite par une présence inégale, souvent indirecte, et par une faible structuration de l’offre partisane à l’échelle communale.
+
+À l’inverse, le cycle 2026 marque un investissement explicite dans le champ municipal. LFI y développe un discours articulé autour du « communalisme », construit des candidatures identifiées et engage, dans plusieurs configurations locales, des figures nationales du mouvement. Certaines communes sont explicitement désignées comme des cibles électorales prioritaires, traduisant une stratégie d’implantation territoriale assumée.
+
+Dans ces conditions, comparer les résultats municipaux de 2026 à ceux de 2020 revient moins à mesurer une dynamique électorale qu’à confronter deux états distincts de l’organisation partisane : un parti faiblement investi dans le champ local d’un côté, un parti engagé dans une stratégie d’ancrage territorial de l’autre.
+
+Cette comparaison ne permet pas de répondre directement à la question suivante :
+
+-   *LFI connaît-elle une progression électorale en 2026 ?*
+
+Elle répond en réalité à une question différente :
+
+-   *Un parti qui investit un scrutin local obtient-il de meilleurs résultats qu’un parti qui s’en tient à distance ?*
+
+La réponse découle en grande partie des conditions mêmes de la comparaison.
+
+## Une histoire de conversion du vote entre scrutins
+
+La question du point de comparaison est centrale. Les élections municipales ne constituent pas un scrutin national homogène, mais une agrégation de configurations locales hétérogènes. À ce titre, la comparaison directe avec un scrutin national antérieur, sans précaution méthodologique, peut en effet prêter à discussion.
+
+L’analyse proposée ne consiste pas à comparer directement deux scrutins de nature différente, ni à en déduire directement une dynamique politique globale. Elle repose sur un usage plus restreint et plus précis des résultats des élections européennes de 2024.
+
+**Elles sont mobilisées comme point de référence local, et non comme équivalent du vote municipal.**
+
+Les élections européennes présentent en effet plusieurs propriétés qui en font un instrument pertinent pour la construction d’un contrefactuel :
+
+-   elles offrent une mesure récente et homogène du rapport de force électoral, à l’échelle fine du territoire. Contrairement aux scrutins locaux, elles reposent sur une offre politique nationale stabilisée et comparable d’un territoire à l’autre.
+
+-   elles sont observées à une granularité compatible avec celle des bureaux de vote, ce qui permet d’établir une correspondance directe avec les résultats municipaux, sans recourir à des agrégations grossières.
+
+-   elles constituent une approximation du potentiel électoral local d’une formation politique, indépendamment des configurations spécifiques du scrutin municipal (alliances, candidatures, fragmentation de l’offre).
+
+Dans ce cadre, le score aux européennes n’est pas interprété comme un équivalent du score municipal, mais comme **une variable explicative** permettant de définir un niveau attendu. L’objectif est d’évaluer si, à potentiel électoral donné, le résultat municipal s’écarte systématiquement du niveau attendu.
+
+Cette distinction est essentielle. Elle permet de dépasser une critique fréquente, consistant à souligner l’incomparabilité des scrutins pour invalider toute analyse de leur relation. Une telle critique serait pertinente dans le cadre d’une comparaison directe des niveaux électoraux. Elle ne l’est pas dans le cadre d’une approche conditionnelle, où l’un des scrutins est utilisé comme référence pour expliquer la variation de l’autre.
+
+```{r}
+p_intro_compare
+```
+
+La relation entre les scores aux européennes de 2024 et ceux des municipales de 2026 apparaît globalement linéaire pour les principales communes concernées. La majorité des observations se situe à proximité de la diagonale, ce qui indique une forte continuité entre les deux scrutins. Nous sommes donc bien plutot dans une logique de consolidation qu'une logique d'expansion.
+
+Pour autant, il est évident que des dynamiques distinctes sont à l'oeuvre :
+
+-   certaines villes voient LFI surperformer globalement par rapport au scrutin précédent (Toulouse, Saint-Denis, ...)
+
+-   d'autres villes semblent reproduire quasiment à l'identique les résultats des européennes (Lille, Rennes, Nantes...)
+
+-   enfin, la tendance dans un certain nombre de villes semble même baissière, au regard des performances précédentes (Lyon, Marseille, Paris, Strasbourg, ...)
+
+Au regard de ces premiers éléments, la question qu'il est pertinent de se poser n'est plus:
+
+-   ***LFI progresse-t-elle par rapport aux municipales précédentes ?***
+
+Mais plutôt :
+
+-   ***Les scores municipaux de 2026 dépassent-ils ce que l’on pouvait attendre au regard des européennes de 2024 ?***
+
+## Stratégie empirique
+
+Ce travail adopte une approche contrefactuelle : estimer, à partir des résultats des européennes de 2024, le niveau attendu du vote LFI aux municipales de 2026, puis mesurer l’écart entre observation et prédiction.
+
+La relation entre les deux scrutins est modélisée au niveau du bureau de vote, en introduisant progressivement des effets de structure et des effets territoriaux. Les résidus de ce modèle permettent d’identifier les zones de surperformance et de sous-performance.
+
+Ce cadre permet de reformuler l’analyse en termes précis :
+
+-   une moyenne des résidus proche de zéro indique l’absence de dynamique agrégée
+
+-   une dispersion élevée des résidus signale au contraire une hétérogénéité territoriale.
+
+L’analyse suggère que la progression apparente de LFI aux municipales de 2026 ne correspond pas à une dynamique d’expansion électorale agrégée, mais à une recomposition territoriale concentrée, largement explicable à partir des rapports de force observés aux européennes de 2024.

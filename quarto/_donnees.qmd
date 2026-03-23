@@ -1,0 +1,17 @@
+# Données et unité d’analyse
+
+## Sources électorales
+
+[Texte : municipales 2026, européennes 2024]
+
+## Unité d’analyse : le bureau de vote
+
+[Texte]
+
+## Harmonisation des données
+
+[Texte : build_objects(), logique de structuration]
+
+## Construction des variables
+
+[Texte : voix, inscrits, parts]

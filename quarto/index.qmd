@@ -1,0 +1,25 @@
+---
+title: "LFI aux municipales 2026 : vague électorale ou illusion d’optique ?"
+author: "Reinaldo Dos Santos"
+date: today
+format:
+  html: default
+---
+
+{{< include _setup.qmd >}}
+
+{{< include _introduction.qmd >}}
+
+<!-- {{< include _donnees.qmd >}} -->
+
+{{< include _contrefactuel.qmd >}}
+
+{{< include _analyse.qmd >}}
+
+{{< include _resultats.qmd >}}
+
+{{< include _heterogeneite.qmd >}}
+
+{{< include _conclusion.qmd >}}
+
+<!-- {{< include _annexes.qmd >}} -->
