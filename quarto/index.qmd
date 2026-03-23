@@ -8,6 +8,10 @@ format:
 
 {{< include _setup.qmd >}}
 
+***Résultat en une phrase***
+
+Les résultats municipaux de 2026 sont globalement conformes à ce que prédisent les européennes de 2024 : pas de surperformance agrégée, mais une hétérogénéité territoriale marquée.
+
 {{< include _introduction.qmd >}}
 
 <!-- {{< include _donnees.qmd >}} -->

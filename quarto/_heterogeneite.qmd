@@ -1,71 +1,29 @@
 # Hétérogénéité territoriale
 
-L’analyse des résidus a montré l’absence de surperformance agrégée et l’existence d’une dispersion des situations locales. Cette section vise à caractériser plus précisément cette hétérogénéité en se plaçant au niveau communal.
-
-Dans le cadre du modèle retenu, les effets aléatoires permettent de capter deux dimensions distinctes : un effet de niveau, mesuré par l’intercept aléatoire, et un effet de conversion, mesuré par la pente associée au score aux européennes. L’entrée la plus directe pour analyser cette hétérogénéité consiste à examiner la distribution des intercepts communaux.
-
-## Distribution des effets communaux
-
-Les intercepts aléatoires représentent l’écart structurel de chaque commune par rapport à la relation moyenne entre les scores européens et municipaux. Une valeur positive indique une surperformance relative, une valeur négative une sous-performance.
-
 ```{r}
 p_ranef_distribution
 ```
 
-La distribution de ces intercepts est centrée sur zéro, ce qui est attendu, mais présente une dispersion notable. La majorité des communes se situe dans un intervalle relativement resserré autour de la moyenne, tandis qu’une minorité se distingue par des écarts plus marqués.
-
-Cette configuration suggère que, si la relation moyenne entre les deux scrutins constitue une bonne approximation globale, elle ne rend pas compte de la diversité des situations locales.
-
-## Synthèse
+Les écarts observés relèvent d’une hétérogénéité territoriale structurée.
 
 ```{r}
 ranef_summary |> gt::gt()
 ```
 
-L’examen des quantiles permet de préciser cette dispersion. Les valeurs médianes sont proches de zéro, confirmant l’absence de déplacement global. En revanche, les écarts observés aux extrémités de la distribution indiquent l’existence de communes présentant des performances significativement supérieures.
-
 ```{r}
 ranef_tail |> gt::gt()
 ```
-
-La distribution apparaît certes relativement symétrique, mais au-delà d'un écart-type, en positif ou négatif, on voit poindre des effets spécifiques aux communes en surperformance.
-
-Ces communes en surperformance manifeste représentent 6% de l'électorat, ce qui reste faible. A l'inverse, une seule commune (0,1% de l'électorat) présente une sous-performance manifeste.
-
-## Communes en surperformance
-
-Certaines communes présentent des intercepts nettement positifs. Dans ces cas, le score municipal observé excède celui que l’on attendrait compte tenu du score aux européennes.
 
 ```{r}
 p_top_ranef
 ```
 
-Ces situations correspondent à des configurations locales spécifiques. Cet avantage peut renvoyer à des facteurs variés — ancrage local, structuration militante, configuration de l’offre politique — qui ne sont pas explicitement modélisés ici. Mais nous pouvons décrire un certain nombre d'entre eux:
-
--   
-
-Il est toutefois important de souligner que ces cas, bien que visibles, restent minoritaires. Ils ne suffisent pas à caractériser une dynamique d’ensemble.
-
-## **Niveau et intensité de conversion**
-
-L’analyse des intercepts décrit l’hétérogénéité en niveau. Elle peut être complétée par l’examen des pentes aléatoires, qui mesurent l’intensité de la relation entre les deux scrutins.
-
-La forte corrélation positive entre intercepts et pentes constitue un résultat central. Elle indique que les communes en surperformance sont également, en moyenne, celles où la conversion du score européen en score municipal est la plus forte.
-
-Autrement dit, les deux dimensions ne sont pas indépendantes. Les territoires favorables cumulent un niveau élevé et une dynamique de conversion plus intense, tandis que les territoires moins favorables cumulent plus souvent un niveau faible et une conversion atténuée.
+Une minorité de communes présente des surperformances marquées, associées à des configurations locales spécifiques. Leur poids électoral reste limité.
 
 ```{r}
 plot_intercept_slope
 ```
 
-La représentation conjointe des intercepts et des pentes confirme cette structuration. Les observations se distribuent majoritairement le long d’un axe croissant, traduisant une cohérence entre niveau et intensité de conversion.
+La majorité des observations est compatible avec le niveau attendu.
 
-## **Interprétation**
-
-L’ensemble des résultats conduit à une lecture unifiée de l’hétérogénéité territoriale.
-
-Les écarts observés ne relèvent ni d’un bruit aléatoire, ni d’une dynamique homogène. Ils s’inscrivent dans une structuration où certaines communes combinent un niveau favorable et une forte capacité de conversion, tandis que d’autres cumulent des caractéristiques inverses.
-
-Cette configuration est incompatible avec l’hypothèse d’une diffusion uniforme du vote. Elle correspond davantage à une logique de concentration, dans laquelle les dynamiques locales se renforcent là où les conditions sont déjà favorables.
-
-Ainsi, l’hétérogénéité territoriale ne constitue pas un simple résidu de l’analyse. Elle en est un élément structurant, qui éclaire la nature même de la relation entre les deux scrutins.
+La distribution des performances correspond à une concentration territoriale plutôt qu’à une diffusion homogène.

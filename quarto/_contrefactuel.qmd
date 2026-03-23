@@ -1,60 +1,38 @@
-# Construction du contrefactuel
+# Cadre empirique
 
-## Principe
+## Principe contrefactuel
 
-L’objectif est de distinguer une dynamique d’expansion électorale d’un effet de reconduction des rapports de force existants. Pour cela, il est nécessaire de définir un niveau de référence permettant d’évaluer les performances observées aux municipales de 2026.
-
-Ce travail repose sur une approche contrefactuelle simple : estimer, à partir des résultats des élections européennes de 2024, le niveau attendu du vote LFI aux municipales de 2026, puis mesurer l’écart entre ce niveau attendu et le niveau observé.
-
-Formellement, on cherche à approcher une fonction de la forme :
+L’analyse consiste à estimer le score municipal attendu à partir du score observé aux élections européennes, puis à mesurer l’écart entre observation et prédiction :
 
 $$
 Y_{i} = f(X_{i}) + \varepsilon_{i}
 $$
 
-où :
+où le terme $\varepsilon_i$ mesure l'écart au niveau attendu.
 
--   $Y_i$ représente le score LFI aux municipales de 2026 dans le bureau de vote (i)
+Une moyenne des résidus proche de zéro indique l’absence de dynamique agrégée. Leur dispersion renseigne sur l’hétérogénéité territoriale.
 
--   $X_{i}$ le score observé aux européennes de 2024 dans ce même bureau
+## Point de référence
 
--   $\varepsilon_i$ l’écart entre observation et prédiction
+Les élections européennes de 2024 sont utilisées comme référence locale. Elles offrent :
 
-L’interprétation est la suivante :
+-   une offre politique homogène
 
--   une moyenne des $\varepsilon_{i}$ proche de zéro indique l’absence de dynamique agrégée
+-   une mesure récente du rapport de force
 
--   *la dispersion des* $\varepsilon_{i}$ renseigne sur l’hétérogénéité territoriale des performances.
+-   une granularité compatible avec les bureaux de vote
 
-## Base analytique
+Elles sont mobilisées comme proxy du potentiel électoral local, indépendamment des configurations propres au scrutin municipal.
 
-L’analyse est conduite au niveau du bureau de vote, qui constitue l’unité d’observation la plus fine pour laquelle les données sont disponibles de manière homogène sur les deux scrutins.
+# Modélisation
 
-La base de données mobilisée, notée `base_cf`, associe à chaque bureau de vote :
-
--   le score LFI aux européennes de 2024
-
--   le score LFI aux municipales de 2026
-
--   un identifiant communal permettant d’introduire des effets territoriaux
-
-Les scores sont exprimés en parts des inscrits, afin de neutraliser les effets de participation différenciée entre les scrutins.
-
-## Modèle A : relation simple
-
-L’objectif n’est pas de maximiser la capacité explicative du modèle, mais de tester si le score aux européennes suffit à rendre compte du score municipal.
-
-### Spécification
-
-Ce modèle estime une relation linéaire simple entre les deux scrutins :
+## Modèle de base
 
 $$
 Y_{i} = \alpha + \beta X_{i} + \varepsilon_{i}
 $$
 
-Il capture une relation moyenne entre les deux scrutins, sous condition d'homogénéité territoriale.
-
-### Performance du modèle
+Ce modèle fournit une première approximation du contrefactuel.
 
 ```{r}
 modele_simple <- base_cf |> 
@@ -65,15 +43,7 @@ sjPlot::tab_model(modele_simple)
 
 Le modèle explique 37,8% de la variance du score LFI aux municipales. Compte tenu de la simplicité de la spécification, le niveau de variance expliquée est substantiel, sans être suffisant pour caractériser la relation.
 
-## Modèle B : intégrer le contexte local
-
-Dans le cadre d’élections locales, l’hypothèse d’homogénéité territoriale est peu plausible. En effet, chaque commune est une petite élection en soi: candidats différents, offre politique spécifique (alliances, listes locales), contexte politique local (maire sortant, député de la circonscription...).
-
-Pour cette raison, il est nécessaire de construire un modèle intégrant des effets aléatoires par commune.
-
-### Spécification
-
-Le modèle estime une relation linéaire simple entre les deux scrutins :
+## Modèle hiérarchique
 
 $$
 Y_{i} = \alpha + \beta X_{i} + u_{c[i]} + v_{c[i]} X_{i} + \varepsilon_{i}
@@ -81,16 +51,10 @@ $$
 
 où $u_{c[i]}$ et $v_{c[i]}$ sont des effets aléatoires par commune.
 
-Ce modèle capture une relation moyenne entre européennes et municipales, en autorisant une hétérogénéité entre communes dans le niveau et la pente de cette relation.
-
-### Performance du modèle
+Le modèle autorise une hétérogénéité entre communes en niveau et en pente.
 
 ```{r}
 model_A |> sjPlot::tab_model()
 ```
 
-La performance du modèle atteint désormais la zone de l'acceptable: 79,7% de la variance du score LFI aux municipales est expliqué par les effets fixes et aléatoires.
-
-La forte valeur de l’ICC (0.73) indique que la variance est majoritairement structurée au niveau communal. L’hypothèse d’homogénéité territoriale est donc empiriquement rejetée.
-
-Nous pouvons désormais nous concentrer sur l'analyse des coefficients modèle. Ce modèle permet désormais d’analyser la structure de la relation entre les deux scrutins, en distinguant effets de niveau et effets de conversion.
+La variance est majoritairement structurée au niveau communal. L’hypothèse d’une relation homogène est rejetée.
