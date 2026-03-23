@@ -56,11 +56,13 @@ plot_intro_top_communes_lfi <- function(scores_lfi_commune, n = 30) {
     ggplot(
       mapping = aes(
         y = reorder(libelle_commune, score),
-        x = score,
-        size = voix
+        x = score
       )
     ) +
-    geom_point() +
+    geom_point(mapping = aes(size = voix)) +
+    geom_segment(mapping = aes(
+      x = 0, xend = score
+    )) +
     labs(
       title = "Communes où LFI réalise ses meilleurs scores municipaux",
       subtitle = "Part de la liste LFI dans les suffrages exprimés communaux",

@@ -27,7 +27,7 @@ euro_url <- "https://www.data.gouv.fr/api/1/datasets/r/cc1883d9-1265-4365-b754-f
 
 top_n <- 20
 
-liste_models <- c("A", "B", "C_full", "C_no_VIF", "C_ortho")
+liste_models <- c("A")
 
 model_grid <- tibble::tibble(
   model_name = liste_models,
@@ -195,6 +195,22 @@ list(
     tar_target(
       p_bottom_ranef,
       plot_bottom_ranef_communes(re_all, n = top_n_target)
+    ),
+    tar_target(
+      commune_random_effects,
+      extract_commune_random_effects(
+        model = model_fit,
+        bureaux = muni_data$bureaux
+      )
+    ),
+    tar_target(
+      plot_intercept_slope,
+      plot_commune_intercept_slope(
+        df_re = commune_random_effects,
+        n_labels = 10,
+        caption_width = 65,
+        highlight_communes = c("Brest", "Saint-Denis", "Toulouse", "Roubaix")
+      )
     ),
     tar_target(
       publication_bundle,
