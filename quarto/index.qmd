@@ -1,5 +1,6 @@
 ---
-title: "LFI aux municipales 2026 : vague électorale ou illusion d’optique ?"
+title: "La ‘vague LFI’ aux municipales 2026 : une illusion statistique ?"
+subtitle: "Résultat principal : aucune surperformance agrégée par rapport aux européennes 2024."
 author: "Reinaldo Dos Santos"
 date: today
 format:
