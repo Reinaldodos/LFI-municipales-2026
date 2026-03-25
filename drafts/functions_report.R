@@ -171,3 +171,58 @@ estimate_flows_regularized <- function(data,
     optim = opt
   )
 }
+
+tidy_aggregate_flows <- function(mod_flux){
+  mod_flux$aggregate_flows |>
+    as.data.frame() |>
+    rownames_to_column(var = "liste_t1") |>
+    pivot_longer(cols = -liste_t1,
+                 names_to = "liste_t2",
+                 values_to = "voix_flux",
+                 values_transform = as.integer)
+}
+
+
+get_reports <- function(mod_flux) {
+  tidy_transition_matrix(mod_flux) |>
+    mutate(part_report = round(part_report, digits = 2)) |>
+    filter(part_report > 0) |>
+    pivot_wider(names_from = "liste_t2", values_from = "part_report")
+}
+
+get_flux_voix <- function(resultats, mod_flux) {
+  liste_nuancees <-
+    resultats |>
+    distinct(tour, liste, nuance) |>
+    mutate(
+      liste_nuance =
+        case_when(
+          is.na(nuance) ~ glue::glue("{tour} : {liste}"),
+          .default = glue::glue("{tour} : {liste} ({nuance})")
+        )
+    ) |>
+    mutate(liste_nuance) %>%
+    split(f = .$tour)
+
+  flux_voix <- tidy_aggregate_flows(mod_flux)
+
+  flux_voix |>
+    right_join(
+      x = liste_nuancees$t1,
+      by = join_by(liste == liste_t1)
+    ) |>
+    rename(
+      liste_t1 = liste_nuance,
+      nuance_t1 = nuance
+    ) |>
+    select(-tour, -liste) |>
+    right_join(
+      x = liste_nuancees$t2,
+      by = join_by(liste == liste_t2)
+    ) |>
+    rename(liste_t2 = liste_nuance) |>
+    select(-tour, -liste, -nuance) |>
+    mutate(
+      nuance_t1 = recode_bloc_nuance(nuance_t1)
+    )
+}
