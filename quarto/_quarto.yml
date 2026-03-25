@@ -6,9 +6,12 @@ manuscript:
 
 format:
   html:
+    css: styles.css
+    lang: fr
     toc: true
     toc-depth: 3
     number-sections: true
+    anchor-sections: true
     html-math-method: mathjax
     theme: cosmo
     code-fold: true

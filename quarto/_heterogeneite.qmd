@@ -40,9 +40,19 @@ Certaines communes présentent des intercepts nettement positifs. Dans ces cas, 
 p_top_ranef
 ```
 
-Ces situations correspondent à des configurations locales spécifiques. Cet avantage peut renvoyer à des facteurs variés — ancrage local, structuration militante, configuration de l’offre politique — qui ne sont pas explicitement modélisés ici. Mais nous pouvons décrire un certain nombre d'entre eux:
+Ces situations correspondent à des configurations locales spécifiques. Cet avantage peut renvoyer à des facteurs variés — ancrage local, structuration militante, configuration de l’offre politique — qui ne sont pas explicitement modélisés ici. Nous pouvons néanmoins décrire un certain nombre d'entre eux:
 
--   
+-   Faches-Thumesnil : le candidat LFI est le maire sortant, à la tête d'une liste d'union de la gauche.
+
+-   Toulouse : la liste LFI fédère la mouvance altermondialiste et écologiste radicale propre à l'agglomération toulousaine.
+
+-   Yerres : dans le fief de Dupont-Aignan, la gauche part rassemblée, avec un candidat LFI à sa tête.
+
+-   Sotteville-lès-Rouen: ville cheminote de la banlieue de Rouen, la gauche y fait 90%.
+
+-   Roubaix: le candidat LFI est le député actuel de la circonscription, qui a fait de la conquête de la mairie son objectif principal.
+
+-   Saint-Denis : ville historiquement communiste (1944-2020), le candidat LFI est à la tête d'une alliance LFI-PCF pour reprendre la ville conquise par le PS en 2020.
 
 Il est toutefois important de souligner que ces cas, bien que visibles, restent minoritaires. Ils ne suffisent pas à caractériser une dynamique d’ensemble.
 
