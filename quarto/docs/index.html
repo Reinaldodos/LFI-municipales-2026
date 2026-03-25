@@ -1,0 +1,3094 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.25">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Reinaldo Dos Santos">
+
+<title>LFI aux municipales 2026 : vague électorale ou illusion d’optique ? – Note de recherche</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-32cde201383484782f791e69c20dc610.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Pas de résultats",
+    "search-matching-documents-text": "documents trouvés",
+    "search-copy-link-title": "Copier le lien vers la recherche",
+    "search-hide-matches-text": "Cacher les correspondances additionnelles",
+    "search-more-match-text": "correspondance de plus dans ce document",
+    "search-more-matches-text": "correspondances de plus dans ce document",
+    "search-clear-button-title": "Effacer",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Annuler",
+    "search-submit-button-title": "Envoyer",
+    "search-label": "Recherche"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-search-results"></div>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Sur cette page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">1</span> Introduction</a>
+  <ul class="collapse">
+  <li><a href="#une-perception-de-vague-électorale" id="toc-une-perception-de-vague-électorale" class="nav-link" data-scroll-target="#une-perception-de-vague-électorale"><span class="header-section-number">1.1</span> Une perception de vague électorale</a></li>
+  <li><a href="#un-problème-mal-posé" id="toc-un-problème-mal-posé" class="nav-link" data-scroll-target="#un-problème-mal-posé"><span class="header-section-number">1.2</span> Un problème mal posé</a></li>
+  <li><a href="#une-histoire-de-conversion-du-vote-entre-scrutins" id="toc-une-histoire-de-conversion-du-vote-entre-scrutins" class="nav-link" data-scroll-target="#une-histoire-de-conversion-du-vote-entre-scrutins"><span class="header-section-number">1.3</span> Une histoire de conversion du vote entre scrutins</a></li>
+  <li><a href="#stratégie-empirique" id="toc-stratégie-empirique" class="nav-link" data-scroll-target="#stratégie-empirique"><span class="header-section-number">1.4</span> Stratégie empirique</a></li>
+  </ul></li>
+  <li><a href="#construction-du-contrefactuel" id="toc-construction-du-contrefactuel" class="nav-link" data-scroll-target="#construction-du-contrefactuel"><span class="header-section-number">2</span> Construction du contrefactuel</a>
+  <ul class="collapse">
+  <li><a href="#principe" id="toc-principe" class="nav-link" data-scroll-target="#principe"><span class="header-section-number">2.1</span> Principe</a></li>
+  <li><a href="#base-analytique" id="toc-base-analytique" class="nav-link" data-scroll-target="#base-analytique"><span class="header-section-number">2.2</span> Base analytique</a></li>
+  <li><a href="#modèle-a-relation-simple" id="toc-modèle-a-relation-simple" class="nav-link" data-scroll-target="#modèle-a-relation-simple"><span class="header-section-number">2.3</span> Modèle A : relation simple</a>
+  <ul class="collapse">
+  <li><a href="#spécification" id="toc-spécification" class="nav-link" data-scroll-target="#spécification"><span class="header-section-number">2.3.1</span> Spécification</a></li>
+  <li><a href="#performance-du-modèle" id="toc-performance-du-modèle" class="nav-link" data-scroll-target="#performance-du-modèle"><span class="header-section-number">2.3.2</span> Performance du modèle</a></li>
+  </ul></li>
+  <li><a href="#modèle-b-intégrer-le-contexte-local" id="toc-modèle-b-intégrer-le-contexte-local" class="nav-link" data-scroll-target="#modèle-b-intégrer-le-contexte-local"><span class="header-section-number">2.4</span> Modèle B : intégrer le contexte local</a>
+  <ul class="collapse">
+  <li><a href="#spécification-1" id="toc-spécification-1" class="nav-link" data-scroll-target="#spécification-1"><span class="header-section-number">2.4.1</span> Spécification</a></li>
+  <li><a href="#performance-du-modèle-1" id="toc-performance-du-modèle-1" class="nav-link" data-scroll-target="#performance-du-modèle-1"><span class="header-section-number">2.4.2</span> Performance du modèle</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#analyse-des-coefficients" id="toc-analyse-des-coefficients" class="nav-link" data-scroll-target="#analyse-des-coefficients"><span class="header-section-number">3</span> Analyse des coefficients</a>
+  <ul class="collapse">
+  <li><a href="#leffet-fixe-des-européennes-une-transmission-positive-mais-incomplète" id="toc-leffet-fixe-des-européennes-une-transmission-positive-mais-incomplète" class="nav-link" data-scroll-target="#leffet-fixe-des-européennes-une-transmission-positive-mais-incomplète"><span class="header-section-number">3.1</span> L’effet fixe des européennes : une transmission positive mais incomplète</a></li>
+  <li><a href="#lintercept-fixe-un-niveau-moyen-légèrement-inférieur-à-la-référence" id="toc-lintercept-fixe-un-niveau-moyen-légèrement-inférieur-à-la-référence" class="nav-link" data-scroll-target="#lintercept-fixe-un-niveau-moyen-légèrement-inférieur-à-la-référence"><span class="header-section-number">3.2</span> L’intercept fixe : un niveau moyen légèrement inférieur à la référence</a></li>
+  <li><a href="#la-variance-résiduelle-une-part-dhétérogénéité-demeure-au-niveau-des-bureaux" id="toc-la-variance-résiduelle-une-part-dhétérogénéité-demeure-au-niveau-des-bureaux" class="nav-link" data-scroll-target="#la-variance-résiduelle-une-part-dhétérogénéité-demeure-au-niveau-des-bureaux"><span class="header-section-number">3.3</span> La variance résiduelle : une part d’hétérogénéité demeure au niveau des bureaux</a></li>
+  <li><a href="#la-variance-des-intercepts-communaux-des-différences-de-niveau-marquées-entre-communes" id="toc-la-variance-des-intercepts-communaux-des-différences-de-niveau-marquées-entre-communes" class="nav-link" data-scroll-target="#la-variance-des-intercepts-communaux-des-différences-de-niveau-marquées-entre-communes"><span class="header-section-number">3.4</span> La variance des intercepts communaux : des différences de niveau marquées entre communes</a></li>
+  <li><a href="#la-variance-des-pentes-communales-la-conversion-du-vote-nest-pas-homogène" id="toc-la-variance-des-pentes-communales-la-conversion-du-vote-nest-pas-homogène" class="nav-link" data-scroll-target="#la-variance-des-pentes-communales-la-conversion-du-vote-nest-pas-homogène"><span class="header-section-number">3.5</span> La variance des pentes communales : la conversion du vote n’est pas homogène</a></li>
+  <li><a href="#corrélation-entre-intercept-et-pente-niveau-et-conversion-vont-ensemble" id="toc-corrélation-entre-intercept-et-pente-niveau-et-conversion-vont-ensemble" class="nav-link" data-scroll-target="#corrélation-entre-intercept-et-pente-niveau-et-conversion-vont-ensemble"><span class="header-section-number">3.6</span> Corrélation entre intercept et pente : niveau et conversion vont ensemble</a></li>
+  <li><a href="#corrélation-intra-classe-icc-une-grande-partie-de-la-variance-est-communale" id="toc-corrélation-intra-classe-icc-une-grande-partie-de-la-variance-est-communale" class="nav-link" data-scroll-target="#corrélation-intra-classe-icc-une-grande-partie-de-la-variance-est-communale"><span class="header-section-number">3.7</span> Corrélation Intra-Classe ICC : une grande partie de la variance est communale</a></li>
+  <li><a href="#pouvoir-explicatif-du-modèle-une-forte-amélioration-liée-aux-effets-territoriaux" id="toc-pouvoir-explicatif-du-modèle-une-forte-amélioration-liée-aux-effets-territoriaux" class="nav-link" data-scroll-target="#pouvoir-explicatif-du-modèle-une-forte-amélioration-liée-aux-effets-territoriaux"><span class="header-section-number">3.8</span> Pouvoir explicatif du modèle : une forte amélioration liée aux effets territoriaux</a></li>
+  <li><a href="#synthèse" id="toc-synthèse" class="nav-link" data-scroll-target="#synthèse"><span class="header-section-number">3.9</span> Synthèse</a></li>
+  </ul></li>
+  <li><a href="#résultats-principaux" id="toc-résultats-principaux" class="nav-link" data-scroll-target="#résultats-principaux"><span class="header-section-number">4</span> Résultats principaux</a>
+  <ul class="collapse">
+  <li><a href="#résultats-agrégés" id="toc-résultats-agrégés" class="nav-link" data-scroll-target="#résultats-agrégés"><span class="header-section-number">4.1</span> Résultats agrégés</a></li>
+  <li><a href="#distribution-des-résidus" id="toc-distribution-des-résidus" class="nav-link" data-scroll-target="#distribution-des-résidus"><span class="header-section-number">4.2</span> Distribution des résidus</a></li>
+  <li><a href="#relation-européenne-municipale" id="toc-relation-européenne-municipale" class="nav-link" data-scroll-target="#relation-européenne-municipale"><span class="header-section-number">4.3</span> Relation européenne / municipale</a></li>
+  <li><a href="#interprétation" id="toc-interprétation" class="nav-link" data-scroll-target="#interprétation"><span class="header-section-number">4.4</span> Interprétation</a></li>
+  </ul></li>
+  <li><a href="#hétérogénéité-territoriale" id="toc-hétérogénéité-territoriale" class="nav-link" data-scroll-target="#hétérogénéité-territoriale"><span class="header-section-number">5</span> Hétérogénéité territoriale</a>
+  <ul class="collapse">
+  <li><a href="#distribution-des-effets-communaux" id="toc-distribution-des-effets-communaux" class="nav-link" data-scroll-target="#distribution-des-effets-communaux"><span class="header-section-number">5.1</span> Distribution des effets communaux</a></li>
+  <li><a href="#synthèse-1" id="toc-synthèse-1" class="nav-link" data-scroll-target="#synthèse-1"><span class="header-section-number">5.2</span> Synthèse</a></li>
+  <li><a href="#communes-en-surperformance" id="toc-communes-en-surperformance" class="nav-link" data-scroll-target="#communes-en-surperformance"><span class="header-section-number">5.3</span> Communes en surperformance</a></li>
+  <li><a href="#niveau-et-intensité-de-conversion" id="toc-niveau-et-intensité-de-conversion" class="nav-link" data-scroll-target="#niveau-et-intensité-de-conversion"><span class="header-section-number">5.4</span> <strong>Niveau et intensité de conversion</strong></a></li>
+  <li><a href="#interprétation-1" id="toc-interprétation-1" class="nav-link" data-scroll-target="#interprétation-1"><span class="header-section-number">5.5</span> <strong>Interprétation</strong></a></li>
+  </ul></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">6</span> Conclusion</a>
+  <ul class="collapse">
+  <li><a href="#résultat-principal" id="toc-résultat-principal" class="nav-link" data-scroll-target="#résultat-principal"><span class="header-section-number">6.1</span> Résultat principal</a></li>
+  <li><a href="#lecture-politique" id="toc-lecture-politique" class="nav-link" data-scroll-target="#lecture-politique"><span class="header-section-number">6.2</span> Lecture politique</a></li>
+  <li><a href="#ouvertures" id="toc-ouvertures" class="nav-link" data-scroll-target="#ouvertures"><span class="header-section-number">6.3</span> Ouvertures</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">LFI aux municipales 2026 : vague électorale ou illusion d’optique ?</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Auteur·rice</div>
+    <div class="quarto-title-meta-contents">
+             <p>Reinaldo Dos Santos </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Date de publication</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">25 mars 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="introduction" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Introduction</h1>
+<section id="une-perception-de-vague-électorale" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="une-perception-de-vague-électorale"><span class="header-section-number">1.1</span> Une perception de vague électorale</h2>
+<p>Les résultats des élections municipales de 2026 ont souvent été interprétés comme le signe d’une progression significative de La France insoumise (LFI). Cette lecture repose principalement sur la comparaison avec les élections municipales précédentes, qui fait apparaître des hausses de scores dans un certain nombre de communes.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>p_intro_top</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Certains résultats ont été particulièrement visibles en raison de leur ampleur. La victoire dès le premier tour à Saint-Denis, la mise en ballotage du maire sortant à Lille, ou encore la prise de pouvoir sur l’électorat de gauche à Toulouse ont été les carburants de ce narratif de “vague LFI”.</p>
+</section>
+<section id="un-problème-mal-posé" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="un-problème-mal-posé"><span class="header-section-number">1.2</span> Un problème mal posé</h2>
+<p>Cette interprétation soulève toutefois des difficultés, tant en termes de base de comparaison que de validité analytique.</p>
+<p>Tout d’abord, comparer directement les municipales de 2026 aux municipales antérieures revient à ignorer un fait élémentaire : les deux scrutins ne partagent ni les mêmes structures d’offre politique, ni les mêmes logiques de mobilisation.</p>
+<p>Un argument central tient au positionnement de LFI entre les deux cycles électoraux. En 2020, le mouvement a largement marginalisé l’échelon municipal dans sa stratégie, privilégiant un ancrage national structuré autour de la figure de son leader, qui qualifiait lui-même les élections municipales de « tambouille locale ». Cette orientation s’est traduite par une présence inégale, souvent indirecte, et par une faible structuration de l’offre partisane à l’échelle communale.</p>
+<p>À l’inverse, le cycle 2026 marque un investissement explicite dans le champ municipal. LFI y développe un discours articulé autour du « communalisme », construit des candidatures identifiées et engage, dans plusieurs configurations locales, des figures nationales du mouvement. Certaines communes sont explicitement désignées comme des cibles électorales prioritaires, traduisant une stratégie d’implantation territoriale assumée.</p>
+<p>Dans ces conditions, comparer les résultats municipaux de 2026 à ceux de 2020 revient moins à mesurer une dynamique électorale qu’à confronter deux états distincts de l’organisation partisane : un parti faiblement investi dans le champ local d’un côté, un parti engagé dans une stratégie d’ancrage territorial de l’autre.</p>
+<p>Cette comparaison ne permet pas de répondre directement à la question suivante :</p>
+<ul>
+<li><em>LFI connaît-elle une progression électorale en 2026 ?</em></li>
+</ul>
+<p>Elle répond en réalité à une question différente :</p>
+<ul>
+<li><em>Un parti qui investit un scrutin local obtient-il de meilleurs résultats qu’un parti qui s’en tient à distance ?</em></li>
+</ul>
+<p>La réponse découle en grande partie des conditions mêmes de la comparaison.</p>
+</section>
+<section id="une-histoire-de-conversion-du-vote-entre-scrutins" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="une-histoire-de-conversion-du-vote-entre-scrutins"><span class="header-section-number">1.3</span> Une histoire de conversion du vote entre scrutins</h2>
+<p>La question du point de comparaison est centrale. Les élections municipales ne constituent pas un scrutin national homogène, mais une agrégation de configurations locales hétérogènes. À ce titre, la comparaison directe avec un scrutin national antérieur, sans précaution méthodologique, peut en effet prêter à discussion.</p>
+<p>L’analyse proposée ne consiste pas à comparer directement deux scrutins de nature différente, ni à en déduire directement une dynamique politique globale. Elle repose sur un usage plus restreint et plus précis des résultats des élections européennes de 2024.</p>
+<p><strong>Elles sont mobilisées comme point de référence local, et non comme équivalent du vote municipal.</strong></p>
+<p>Les élections européennes présentent en effet plusieurs propriétés qui en font un instrument pertinent pour la construction d’un contrefactuel :</p>
+<ul>
+<li><p>elles offrent une mesure récente et homogène du rapport de force électoral, à l’échelle fine du territoire. Contrairement aux scrutins locaux, elles reposent sur une offre politique nationale stabilisée et comparable d’un territoire à l’autre.</p></li>
+<li><p>elles sont observées à une granularité compatible avec celle des bureaux de vote, ce qui permet d’établir une correspondance directe avec les résultats municipaux, sans recourir à des agrégations grossières.</p></li>
+<li><p>elles constituent une approximation du potentiel électoral local d’une formation politique, indépendamment des configurations spécifiques du scrutin municipal (alliances, candidatures, fragmentation de l’offre).</p></li>
+</ul>
+<p>Dans ce cadre, le score aux européennes n’est pas interprété comme un équivalent du score municipal, mais comme <strong>une variable explicative</strong> permettant de définir un niveau attendu. L’objectif est d’évaluer si, à potentiel électoral donné, le résultat municipal s’écarte systématiquement du niveau attendu.</p>
+<p>Cette distinction est essentielle. Elle permet de dépasser une critique fréquente, consistant à souligner l’incomparabilité des scrutins pour invalider toute analyse de leur relation. Une telle critique serait pertinente dans le cadre d’une comparaison directe des niveaux électoraux. Elle ne l’est pas dans le cadre d’une approche conditionnelle, où l’un des scrutins est utilisé comme référence pour expliquer la variation de l’autre.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>p_intro_compare</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>La relation entre les scores aux européennes de 2024 et ceux des municipales de 2026 apparaît globalement linéaire pour les principales communes concernées. La majorité des observations se situe à proximité de la diagonale, ce qui indique une forte continuité entre les deux scrutins. Nous sommes donc bien plutot dans une logique de consolidation qu’une logique d’expansion.</p>
+<p>Pour autant, il est évident que des dynamiques distinctes sont à l’oeuvre :</p>
+<ul>
+<li><p>certaines villes voient LFI surperformer globalement par rapport au scrutin précédent (Toulouse, Saint-Denis, …)</p></li>
+<li><p>d’autres villes semblent reproduire quasiment à l’identique les résultats des européennes (Lille, Rennes, Nantes…)</p></li>
+<li><p>enfin, la tendance dans un certain nombre de villes semble même baissière, au regard des performances précédentes (Lyon, Marseille, Paris, Strasbourg, …)</p></li>
+</ul>
+<p>Au regard de ces premiers éléments, la question qu’il est pertinent de se poser n’est plus:</p>
+<ul>
+<li><strong><em>LFI progresse-t-elle par rapport aux municipales précédentes ?</em></strong></li>
+</ul>
+<p>Mais plutôt :</p>
+<ul>
+<li><strong><em>Les scores municipaux de 2026 dépassent-ils ce que l’on pouvait attendre au regard des européennes de 2024 ?</em></strong></li>
+</ul>
+</section>
+<section id="stratégie-empirique" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="stratégie-empirique"><span class="header-section-number">1.4</span> Stratégie empirique</h2>
+<p>Ce travail adopte une approche contrefactuelle : estimer, à partir des résultats des européennes de 2024, le niveau attendu du vote LFI aux municipales de 2026, puis mesurer l’écart entre observation et prédiction.</p>
+<p>La relation entre les deux scrutins est modélisée au niveau du bureau de vote, en introduisant progressivement des effets de structure et des effets territoriaux. Les résidus de ce modèle permettent d’identifier les zones de surperformance et de sous-performance.</p>
+<p>Ce cadre permet de reformuler l’analyse en termes précis :</p>
+<ul>
+<li><p>une moyenne des résidus proche de zéro indique l’absence de dynamique agrégée</p></li>
+<li><p>une dispersion élevée des résidus signale au contraire une hétérogénéité territoriale.</p></li>
+</ul>
+<p>L’analyse suggère que la progression apparente de LFI aux municipales de 2026 ne correspond pas à une dynamique d’expansion électorale agrégée, mais à une recomposition territoriale concentrée, largement explicable à partir des rapports de force observés aux européennes de 2024.</p>
+<!-- {{< include _donnees.qmd >}} -->
+</section>
+</section>
+<section id="construction-du-contrefactuel" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Construction du contrefactuel</h1>
+<section id="principe" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="principe"><span class="header-section-number">2.1</span> Principe</h2>
+<p>L’objectif est de distinguer une dynamique d’expansion électorale d’un effet de reconduction des rapports de force existants. Pour cela, il est nécessaire de définir un niveau de référence permettant d’évaluer les performances observées aux municipales de 2026.</p>
+<p>Ce travail repose sur une approche contrefactuelle simple : estimer, à partir des résultats des élections européennes de 2024, le niveau attendu du vote LFI aux municipales de 2026, puis mesurer l’écart entre ce niveau attendu et le niveau observé.</p>
+<p>Formellement, on cherche à approcher une fonction de la forme :</p>
+<p><span class="math display">\[
+Y_{i} = f(X_{i}) + \varepsilon_{i}
+\]</span></p>
+<p>où :</p>
+<ul>
+<li><p><span class="math inline">\(Y_i\)</span> représente le score LFI aux municipales de 2026 dans le bureau de vote (i)</p></li>
+<li><p><span class="math inline">\(X_{i}\)</span> le score observé aux européennes de 2024 dans ce même bureau</p></li>
+<li><p><span class="math inline">\(\varepsilon_i\)</span> l’écart entre observation et prédiction</p></li>
+</ul>
+<p>L’interprétation est la suivante :</p>
+<ul>
+<li><p>une moyenne des <span class="math inline">\(\varepsilon_{i}\)</span> proche de zéro indique l’absence de dynamique agrégée</p></li>
+<li><p><em>la dispersion des</em> <span class="math inline">\(\varepsilon_{i}\)</span> renseigne sur l’hétérogénéité territoriale des performances.</p></li>
+</ul>
+</section>
+<section id="base-analytique" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="base-analytique"><span class="header-section-number">2.2</span> Base analytique</h2>
+<p>L’analyse est conduite au niveau du bureau de vote, qui constitue l’unité d’observation la plus fine pour laquelle les données sont disponibles de manière homogène sur les deux scrutins.</p>
+<p>La base de données mobilisée, notée <code>base_cf</code>, associe à chaque bureau de vote :</p>
+<ul>
+<li><p>le score LFI aux européennes de 2024</p></li>
+<li><p>le score LFI aux municipales de 2026</p></li>
+<li><p>un identifiant communal permettant d’introduire des effets territoriaux</p></li>
+</ul>
+<p>Les scores sont exprimés en parts des inscrits, afin de neutraliser les effets de participation différenciée entre les scrutins.</p>
+</section>
+<section id="modèle-a-relation-simple" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="modèle-a-relation-simple"><span class="header-section-number">2.3</span> Modèle A : relation simple</h2>
+<p>L’objectif n’est pas de maximiser la capacité explicative du modèle, mais de tester si le score aux européennes suffit à rendre compte du score municipal.</p>
+<section id="spécification" class="level3" data-number="2.3.1">
+<h3 data-number="2.3.1" class="anchored" data-anchor-id="spécification"><span class="header-section-number">2.3.1</span> Spécification</h3>
+<p>Ce modèle estime une relation linéaire simple entre les deux scrutins :</p>
+<p><span class="math display">\[
+Y_{i} = \alpha + \beta X_{i} + \varepsilon_{i}
+\]</span></p>
+<p>Il capture une relation moyenne entre les deux scrutins, sous condition d’homogénéité territoriale.</p>
+</section>
+<section id="performance-du-modèle" class="level3" data-number="2.3.2">
+<h3 data-number="2.3.2" class="anchored" data-anchor-id="performance-du-modèle"><span class="header-section-number">2.3.2</span> Performance du modèle</h3>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>modele_simple <span class="ot">&lt;-</span> base_cf <span class="sc">|&gt;</span> </span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">lm</span>(<span class="at">formula =</span> municipales_s <span class="sc">~</span> europeennes_s) </span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>sjPlot<span class="sc">::</span><span class="fu">tab_model</span>(modele_simple)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th" style="text-align: center; border-top: double; font-style: normal; font-weight: bold; padding: 0.2cm;">&nbsp;</th>
+<th colspan="3" data-quarto-table-cell-role="th" style="text-align: center; border-top: double; font-style: normal; font-weight: bold; padding: 0.2cm;">municipales s</th>
+</tr>
+<tr class="even">
+<td style="text-align: center; border-bottom: 1px solid; font-style: italic; font-weight: normal;">Predictors</td>
+<td style="text-align: center; border-bottom: 1px solid; font-style: italic; font-weight: normal;">Estimates</td>
+<td style="text-align: center; border-bottom: 1px solid; font-style: italic; font-weight: normal;">CI</td>
+<td style="text-align: center; border-bottom: 1px solid; font-style: italic; font-weight: normal;">p</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding: 0.2cm; vertical-align: top;">(Intercept)</td>
+<td style="text-align: left; padding: 0.2cm; vertical-align: top;">0.00</td>
+<td style="text-align: left; padding: 0.2cm; vertical-align: top;">-0.02&nbsp;–&nbsp;0.02</td>
+<td style="text-align: left; padding: 0.2cm; vertical-align: top;">1.000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding: 0.2cm; vertical-align: top;">europeennes s</td>
+<td style="text-align: left; padding: 0.2cm; vertical-align: top;">0.62</td>
+<td style="text-align: left; padding: 0.2cm; vertical-align: top;">0.60&nbsp;–&nbsp;0.63</td>
+<td style="text-align: left; padding: 0.2cm; vertical-align: top;"><strong>&lt;0.001</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding: 0.2cm; vertical-align: top; padding-top: 0.1cm; padding-bottom: 0.1cm; border-top: 1px solid;">Observations</td>
+<td colspan="3" style="text-align: left; padding: 0.2cm; vertical-align: top; padding-top: 0.1cm; padding-bottom: 0.1cm; border-top: 1px solid;">9852</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding: 0.2cm; vertical-align: top; padding-top: 0.1cm; padding-bottom: 0.1cm;">R<sup>2</sup> / R<sup>2</sup> adjusted</td>
+<td colspan="3" style="text-align: left; padding: 0.2cm; vertical-align: top; padding-top: 0.1cm; padding-bottom: 0.1cm;">0.378 / 0.378</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>Le modèle explique 37,8% de la variance du score LFI aux municipales. Compte tenu de la simplicité de la spécification, le niveau de variance expliquée est substantiel, sans être suffisant pour caractériser la relation.</p>
+</section>
+</section>
+<section id="modèle-b-intégrer-le-contexte-local" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="modèle-b-intégrer-le-contexte-local"><span class="header-section-number">2.4</span> Modèle B : intégrer le contexte local</h2>
+<p>Dans le cadre d’élections locales, l’hypothèse d’homogénéité territoriale est peu plausible. En effet, chaque commune est une petite élection en soi: candidats différents, offre politique spécifique (alliances, listes locales), contexte politique local (maire sortant, député de la circonscription…).</p>
+<p>Pour cette raison, il est nécessaire de construire un modèle intégrant des effets aléatoires par commune.</p>
+<section id="spécification-1" class="level3" data-number="2.4.1">
+<h3 data-number="2.4.1" class="anchored" data-anchor-id="spécification-1"><span class="header-section-number">2.4.1</span> Spécification</h3>
+<p>Le modèle estime une relation linéaire simple entre les deux scrutins :</p>
+<p><span class="math display">\[
+Y_{i} = \alpha + \beta X_{i} + u_{c[i]} + v_{c[i]} X_{i} + \varepsilon_{i}
+\]</span></p>
+<p>où <span class="math inline">\(u_{c[i]}\)</span> et <span class="math inline">\(v_{c[i]}\)</span> sont des effets aléatoires par commune.</p>
+<p>Ce modèle capture une relation moyenne entre européennes et municipales, en autorisant une hétérogénéité entre communes dans le niveau et la pente de cette relation.</p>
+</section>
+<section id="performance-du-modèle-1" class="level3" data-number="2.4.2">
+<h3 data-number="2.4.2" class="anchored" data-anchor-id="performance-du-modèle-1"><span class="header-section-number">2.4.2</span> Performance du modèle</h3>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>model_A <span class="sc">|&gt;</span> sjPlot<span class="sc">::</span><span class="fu">tab_model</span>()</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<table style="border-collapse:collapse; border:none;">
+<tbody><tr>
+<th style="border-top: double; text-align:center; font-style:normal; font-weight:bold; padding:0.2cm;  text-align:left; ">&nbsp;</th>
+<th colspan="3" style="border-top: double; text-align:center; font-style:normal; font-weight:bold; padding:0.2cm; ">municipales s</th>
+</tr>
+<tr>
+<td style=" text-align:center; border-bottom:1px solid; font-style:italic; font-weight:normal;  text-align:left; ">Predictors</td>
+<td style=" text-align:center; border-bottom:1px solid; font-style:italic; font-weight:normal;  ">Estimates</td>
+<td style=" text-align:center; border-bottom:1px solid; font-style:italic; font-weight:normal;  ">CI</td>
+<td style=" text-align:center; border-bottom:1px solid; font-style:italic; font-weight:normal;  ">p</td>
+</tr>
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; ">(Intercept)</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">-0.08</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">-0.16&nbsp;–&nbsp;-0.00</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  "><strong>0.041</strong></td>
+</tr>
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; ">europeennes s</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">0.45</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">0.40&nbsp;–&nbsp;0.49</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  "><strong>&lt;0.001</strong></td>
+</tr>
+<tr>
+<td colspan="4" style="font-weight:bold; text-align:left; padding-top:.8em;">Random Effects</td>
+</tr>
+
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; padding-top:0.1cm; padding-bottom:0.1cm;">σ<sup>2</sup></td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; padding-top:0.1cm; padding-bottom:0.1cm; text-align:left;" colspan="3">0.17</td>
+</tr>
+
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; padding-top:0.1cm; padding-bottom:0.1cm;">τ<sub>00</sub> <sub>code_ville</sub></td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; padding-top:0.1cm; padding-bottom:0.1cm; text-align:left;" colspan="3">0.37</td>
+
+</tr><tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; padding-top:0.1cm; padding-bottom:0.1cm;">τ<sub>11</sub> <sub>code_ville.europeennes_s</sub></td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; padding-top:0.1cm; padding-bottom:0.1cm; text-align:left;" colspan="3">0.10</td>
+
+</tr><tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; padding-top:0.1cm; padding-bottom:0.1cm;">ρ<sub>01</sub> <sub>code_ville</sub></td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; padding-top:0.1cm; padding-bottom:0.1cm; text-align:left;" colspan="3">0.71</td>
+
+</tr><tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; padding-top:0.1cm; padding-bottom:0.1cm;">ICC</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; padding-top:0.1cm; padding-bottom:0.1cm; text-align:left;" colspan="3">0.73</td>
+
+</tr><tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; padding-top:0.1cm; padding-bottom:0.1cm;">N <sub>code_ville</sub></td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; padding-top:0.1cm; padding-bottom:0.1cm; text-align:left;" colspan="3">238</td>
+</tr><tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; padding-top:0.1cm; padding-bottom:0.1cm; border-top:1px solid;">Observations</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; padding-top:0.1cm; padding-bottom:0.1cm; text-align:left; border-top:1px solid;" colspan="3">9852</td>
+</tr>
+<tr>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; padding-top:0.1cm; padding-bottom:0.1cm;">Marginal R<sup>2</sup> / Conditional R<sup>2</sup></td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; padding-top:0.1cm; padding-bottom:0.1cm; text-align:left;" colspan="3">0.239 / 0.797</td>
+</tr>
+
+</tbody></table>
+</div>
+</div>
+<p>La performance du modèle atteint désormais la zone de l’acceptable: 79,7% de la variance du score LFI aux municipales est expliqué par les effets fixes et aléatoires.</p>
+<p>La forte valeur de l’ICC (0.73) indique que la variance est majoritairement structurée au niveau communal. L’hypothèse d’homogénéité territoriale est donc empiriquement rejetée.</p>
+<p>Nous pouvons désormais nous concentrer sur l’analyse des coefficients modèle. Ce modèle permet désormais d’analyser la structure de la relation entre les deux scrutins, en distinguant effets de niveau et effets de conversion.</p>
+</section>
+</section>
+</section>
+<section id="analyse-des-coefficients" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Analyse des coefficients</h1>
+<p>Le modèle retenu vise à estimer la relation entre le score de La France insoumise aux élections européennes de 2024 et son score au premier tour des élections municipales de 2026, tout en autorisant cette relation à varier d’une commune à l’autre.</p>
+<p>L’enjeu de cette section n’est pas encore d’interpréter les résidus, mais de comprendre ce que la structure du modèle implique pour la relation entre les deux scrutins.</p>
+<section id="leffet-fixe-des-européennes-une-transmission-positive-mais-incomplète" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="leffet-fixe-des-européennes-une-transmission-positive-mais-incomplète"><span class="header-section-number">3.1</span> L’effet fixe des européennes : une transmission positive mais incomplète</h2>
+<p>Ce coefficient mesure l’effet moyen du score aux européennes sur le score aux municipales, toutes choses égales par ailleurs, une fois pris en compte le fait que cette relation varie selon les communes.</p>
+<p>Sa valeur indique qu’une hausse d’un écart-type du score LFI aux européennes est associée, en moyenne, à une hausse d’environ 0.45 écart-type du score LFI aux municipales.</p>
+<p>Ce résultat indique que les deux scrutins sont clairement liés. Pour autant, cet effet reste nettement inférieur à 1. Il ne s’agit donc pas d’une simple reproduction mécanique du vote européen dans l’élection municipale. Les rapports de force issus des européennes pèsent fortement sur les municipales, mais ils ne les déterminent pas entièrement.</p>
+</section>
+<section id="lintercept-fixe-un-niveau-moyen-légèrement-inférieur-à-la-référence" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="lintercept-fixe-un-niveau-moyen-légèrement-inférieur-à-la-référence"><span class="header-section-number">3.2</span> L’intercept fixe : un niveau moyen légèrement inférieur à la référence</h2>
+<p>Comme les variables sont standardisées, cet intercept correspond à la valeur attendue du score municipal lorsque le score européen est à son niveau moyen, abstraction faite des effets propres aux communes.</p>
+<p>Sa valeur légèrement négative suggère qu’au point moyen de la distribution, le score municipal tend à être un peu inférieur à ce que donnerait une stricte neutralité entre les deux scrutins. Ce résultat doit être interprété avec prudence. Dans ce type de modèle, l’intercept joue surtout un rôle de point d’ancrage. L’essentiel se joue dans la pente moyenne et dans la variation communale autour de cette pente.</p>
+</section>
+<section id="la-variance-résiduelle-une-part-dhétérogénéité-demeure-au-niveau-des-bureaux" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="la-variance-résiduelle-une-part-dhétérogénéité-demeure-au-niveau-des-bureaux"><span class="header-section-number">3.3</span> La variance résiduelle : une part d’hétérogénéité demeure au niveau des bureaux</h2>
+<p>La variance résiduelle <span class="math inline">\(\sigma²\)</span> est estimée à 0.17.</p>
+<p>Elle correspond à la part de variance qui demeure inexpliquée au niveau du bureau de vote une fois prises en compte la relation avec les européennes et la structuration communale du modèle. Autrement dit, même après avoir introduit un effet moyen et une hétérogénéité par commune, il subsiste des écarts propres aux bureaux.</p>
+<p>Ce résultat est attendu : un bureau de vote reste inséré dans un contexte local très fin, où interviennent des facteurs qui ne sont pas explicitement modélisés ici. Mais le niveau de cette variance résiduelle doit être lu en regard des autres composantes du modèle, qui sont nettement plus importantes.</p>
+</section>
+<section id="la-variance-des-intercepts-communaux-des-différences-de-niveau-marquées-entre-communes" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="la-variance-des-intercepts-communaux-des-différences-de-niveau-marquées-entre-communes"><span class="header-section-number">3.4</span> La variance des intercepts communaux : des différences de niveau marquées entre communes</h2>
+<p>La variance de l’intercept aléatoire communal <span class="math inline">\(\tau_{00}\)</span> est estimée à 0.37.</p>
+<p>Ce paramètre mesure à quel point les communes se distinguent les unes des autres par leur niveau propre de score municipal, indépendamment de leur score européen. Certaines communes se situent structurellement au-dessus de la relation moyenne, d’autres en dessous.</p>
+<p>Cette composante est importante. Elle signifie que la commune n’est pas un simple contenant administratif, mais une dimension structurante de la relation électorale. À score européen comparable, toutes les communes ne se comportent pas de la même manière. Certaines offrent un terrain plus favorable à LFI au moment du scrutin municipal, d’autres au contraire moins favorable.</p>
+</section>
+<section id="la-variance-des-pentes-communales-la-conversion-du-vote-nest-pas-homogène" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="la-variance-des-pentes-communales-la-conversion-du-vote-nest-pas-homogène"><span class="header-section-number">3.5</span> La variance des pentes communales : la conversion du vote n’est pas homogène</h2>
+<p>La variance de la pente aléatoire <span class="math inline">\(\tau_{11}\)</span> est estimée à 0.10.</p>
+<p>Ce paramètre est central. Il indique que l’effet du score européen sur le score municipal varie significativement d’une commune à l’autre. La relation entre les deux scrutins n’a donc pas une intensité fixe sur l’ensemble du territoire.</p>
+<p>Autrement dit, il existe bien une relation moyenne positive, mais certaines communes convertissent bien mieux que d’autres leur score européen en score municipal. C’est ici que le modèle cesse d’être purement additif pour devenir véritablement territorial : la pente elle-même est localisée.</p>
+<p>Ce point est central pour la suite de l’analyse. Il signifie que l’on ne peut pas raisonner comme si un même “coefficient de conversion” s’appliquait uniformément partout.</p>
+</section>
+<section id="corrélation-entre-intercept-et-pente-niveau-et-conversion-vont-ensemble" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="corrélation-entre-intercept-et-pente-niveau-et-conversion-vont-ensemble"><span class="header-section-number">3.6</span> Corrélation entre intercept et pente : niveau et conversion vont ensemble</h2>
+<p>La corrélation entre l’intercept aléatoire et la pente aléatoire <span class="math inline">\(\rho_{01}\)</span> est estimée à 0.71.</p>
+<p>C’est probablement le résultat le plus riche de cette section. Il signifie que les communes où le niveau municipal est structurellement élevé sont aussi, en moyenne, celles où la relation entre européennes et municipales est la plus forte.</p>
+<p>Autrement dit, les deux dimensions ne sont pas indépendantes : certaines communes surperforment en niveau ; et ce sont souvent les mêmes qui convertissent le plus fortement leur score européen en score municipal.</p>
+<p>Cette corrélation positive suggère une logique cumulative. Les territoires favorables ne se contentent pas d’être au-dessus de la moyenne ; ils tendent aussi à amplifier la translation du vote européen en vote municipal. À l’inverse, les communes moins favorables cumulent souvent un niveau plus faible et une conversion plus limitée.</p>
+</section>
+<section id="corrélation-intra-classe-icc-une-grande-partie-de-la-variance-est-communale" class="level2" data-number="3.7">
+<h2 data-number="3.7" class="anchored" data-anchor-id="corrélation-intra-classe-icc-une-grande-partie-de-la-variance-est-communale"><span class="header-section-number">3.7</span> Corrélation Intra-Classe ICC : une grande partie de la variance est communale</h2>
+<p>L’ICC est estimé à 0.73.</p>
+<p>Cela signifie qu’environ 73 % de la variance totale du score municipal est structurée au niveau communal. Le bureau de vote demeure l’unité d’observation, mais l’essentiel de l’hétérogénéité pertinente se joue à l’échelle de la commune.</p>
+<p>Ce résultat justifie pleinement l’abandon d’un modèle linéaire simple à pente fixe. Une relation homogène entre les deux scrutins aurait ignoré la majeure partie de la structuration réelle des données.</p>
+</section>
+<section id="pouvoir-explicatif-du-modèle-une-forte-amélioration-liée-aux-effets-territoriaux" class="level2" data-number="3.8">
+<h2 data-number="3.8" class="anchored" data-anchor-id="pouvoir-explicatif-du-modèle-une-forte-amélioration-liée-aux-effets-territoriaux"><span class="header-section-number">3.8</span> Pouvoir explicatif du modèle : une forte amélioration liée aux effets territoriaux</h2>
+<p>Le R² marginal est de 0.239, tandis que le R² conditionnel atteint 0.797.</p>
+<p>La différence entre les deux mesures est informative. Les seuls effets fixes, c’est-à-dire principalement le score aux européennes, expliquent environ 24 % de la variance. Ce n’est pas négligeable, mais c’est insuffisant pour rendre compte à lui seul de la relation entre les deux scrutins.</p>
+<p>En revanche, dès lors que l’on introduit les effets aléatoires communaux, le pouvoir explicatif du modèle grimpe à près de 80 %. Ce saut indique que l’essentiel de l’ajustement provient de l’intégration de l’hétérogénéité territoriale.</p>
+<p>Il ne suffit donc pas de dire que les municipales prolongent les européennes. Il faut ajouter immédiatement que cette prolongation est fortement médiatisée par des configurations communales spécifiques.</p>
+</section>
+<section id="synthèse" class="level2" data-number="3.9">
+<h2 data-number="3.9" class="anchored" data-anchor-id="synthèse"><span class="header-section-number">3.9</span> Synthèse</h2>
+<p>L’analyse des coefficients conduit à trois constats simples.</p>
+<ul>
+<li><p>il existe bien une relation positive et substantielle entre le score LFI aux européennes et son score aux municipales. Le scrutin européen fournit donc une base pertinente pour construire un contrefactuel municipal.</p></li>
+<li><p>cette relation n’est pas homogène. Les communes diffèrent à la fois par leur niveau propre et par l’intensité avec laquelle le vote européen se convertit en vote municipal.</p></li>
+<li><p>ces deux dimensions vont ensemble : les communes les plus favorables sont aussi, en moyenne, celles où la conversion est la plus forte.</p></li>
+</ul>
+<p>Le modèle ne décrit donc ni une simple reconduction uniforme des rapports de force, ni une dynamique purement erratique. Il met en évidence une relation générale entre les deux scrutins, fortement structurée par l’échelle communale. C’est dans cet espace, entre effet moyen et hétérogénéité territoriale, que les résidus pourront ensuite être interprétés.</p>
+</section>
+</section>
+<section id="résultats-principaux" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Résultats principaux</h1>
+<p>L’ensemble de l’analyse repose désormais sur l’interprétation des résidus du modèle retenu. Ceux-ci mesurent, pour chaque unité d’observation, l’écart entre le score municipal observé et le score attendu compte tenu du niveau issu des élections européennes et de la structure territoriale estimée.</p>
+<p>Ces résidus constituent ainsi le cœur du dispositif contrefactuel. Ils permettent d’évaluer si les performances municipales traduisent une progression systématique par rapport à ce que laisseraient prévoir les résultats européens, ou si elles relèvent d’une simple dispersion autour d’un niveau attendu.</p>
+<section id="résultats-agrégés" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="résultats-agrégés"><span class="header-section-number">4.1</span> Résultats agrégés</h2>
+<p>Le tableau des statistiques descriptives des résidus permet d’apprécier leur distribution globale. Si la moyenne des résidus est, par construction, nulle, cet indicateur est peu informatif. En revanche, la moyenne pondérée, qui tient compte du poids des observations, s’élève à environ 0.008.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>residual_summary_weighted <span class="sc">|&gt;</span> gt<span class="sc">::</span><span class="fu">gt</span>()</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<div id="oswzqiphyq" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#oswzqiphyq table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#oswzqiphyq thead, #oswzqiphyq tbody, #oswzqiphyq tfoot, #oswzqiphyq tr, #oswzqiphyq td, #oswzqiphyq th {
+  border-style: none;
+}
+
+#oswzqiphyq p {
+  margin: 0;
+  padding: 0;
+}
+
+#oswzqiphyq .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#oswzqiphyq .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#oswzqiphyq .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#oswzqiphyq .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#oswzqiphyq .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#oswzqiphyq .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#oswzqiphyq .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#oswzqiphyq .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#oswzqiphyq .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#oswzqiphyq .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#oswzqiphyq .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#oswzqiphyq .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#oswzqiphyq .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#oswzqiphyq .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#oswzqiphyq .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#oswzqiphyq .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#oswzqiphyq .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#oswzqiphyq .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#oswzqiphyq .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#oswzqiphyq .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#oswzqiphyq .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#oswzqiphyq .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#oswzqiphyq .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#oswzqiphyq .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#oswzqiphyq .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#oswzqiphyq .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#oswzqiphyq .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#oswzqiphyq .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#oswzqiphyq .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#oswzqiphyq .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#oswzqiphyq .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#oswzqiphyq .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#oswzqiphyq .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#oswzqiphyq .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#oswzqiphyq .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#oswzqiphyq .gt_left {
+  text-align: left;
+}
+
+#oswzqiphyq .gt_center {
+  text-align: center;
+}
+
+#oswzqiphyq .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#oswzqiphyq .gt_font_normal {
+  font-weight: normal;
+}
+
+#oswzqiphyq .gt_font_bold {
+  font-weight: bold;
+}
+
+#oswzqiphyq .gt_font_italic {
+  font-style: italic;
+}
+
+#oswzqiphyq .gt_super {
+  font-size: 65%;
+}
+
+#oswzqiphyq .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#oswzqiphyq .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#oswzqiphyq .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#oswzqiphyq .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#oswzqiphyq .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#oswzqiphyq .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#oswzqiphyq .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#oswzqiphyq .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#oswzqiphyq div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-bootstrap="false">
+<thead>
+<tr class="gt_col_headings header">
+<th id="weighted_mean" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">weighted_mean</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_right" headers="weighted_mean">0.008304766</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<p>Cette valeur est faible. Elle indique que, une fois contrôlée la relation entre les deux scrutins ainsi que la structuration communale, le score municipal observé ne s’écarte pas de manière significative du score attendu à l’échelle agrégée.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>residual_summary <span class="sc">|&gt;</span> gt<span class="sc">::</span><span class="fu">gt</span>()</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<div id="jpfmzzeasp" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#jpfmzzeasp table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#jpfmzzeasp thead, #jpfmzzeasp tbody, #jpfmzzeasp tfoot, #jpfmzzeasp tr, #jpfmzzeasp td, #jpfmzzeasp th {
+  border-style: none;
+}
+
+#jpfmzzeasp p {
+  margin: 0;
+  padding: 0;
+}
+
+#jpfmzzeasp .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#jpfmzzeasp .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#jpfmzzeasp .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#jpfmzzeasp .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#jpfmzzeasp .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#jpfmzzeasp .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#jpfmzzeasp .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#jpfmzzeasp .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#jpfmzzeasp .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#jpfmzzeasp .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#jpfmzzeasp .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#jpfmzzeasp .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#jpfmzzeasp .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#jpfmzzeasp .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#jpfmzzeasp .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#jpfmzzeasp .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#jpfmzzeasp .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#jpfmzzeasp .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#jpfmzzeasp .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#jpfmzzeasp .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#jpfmzzeasp .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#jpfmzzeasp .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#jpfmzzeasp .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#jpfmzzeasp .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#jpfmzzeasp .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#jpfmzzeasp .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#jpfmzzeasp .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#jpfmzzeasp .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#jpfmzzeasp .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#jpfmzzeasp .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#jpfmzzeasp .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#jpfmzzeasp .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#jpfmzzeasp .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#jpfmzzeasp .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#jpfmzzeasp .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#jpfmzzeasp .gt_left {
+  text-align: left;
+}
+
+#jpfmzzeasp .gt_center {
+  text-align: center;
+}
+
+#jpfmzzeasp .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#jpfmzzeasp .gt_font_normal {
+  font-weight: normal;
+}
+
+#jpfmzzeasp .gt_font_bold {
+  font-weight: bold;
+}
+
+#jpfmzzeasp .gt_font_italic {
+  font-style: italic;
+}
+
+#jpfmzzeasp .gt_super {
+  font-size: 65%;
+}
+
+#jpfmzzeasp .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#jpfmzzeasp .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#jpfmzzeasp .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#jpfmzzeasp .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#jpfmzzeasp .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#jpfmzzeasp .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#jpfmzzeasp .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#jpfmzzeasp .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#jpfmzzeasp div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-bootstrap="false">
+<thead>
+<tr class="gt_col_headings header">
+<th id="Moyenne" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Moyenne</th>
+<th id="aÉcart-type" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Écart-type</th>
+<th id="Min" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Min</th>
+<th id="Q01" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Q01</th>
+<th id="Q05" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Q05</th>
+<th id="Médiane" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Médiane</th>
+<th id="Q95" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Q95</th>
+<th id="Q99" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Q99</th>
+<th id="Max" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Max</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_right" headers="Moyenne">0</td>
+<td class="gt_row gt_right" headers="Écart-type">0.402</td>
+<td class="gt_row gt_right" headers="Min">-4.284</td>
+<td class="gt_row gt_right" headers="Q01">-1.086</td>
+<td class="gt_row gt_right" headers="Q05">-0.558</td>
+<td class="gt_row gt_right" headers="Médiane">-0.018</td>
+<td class="gt_row gt_right" headers="Q95">0.642</td>
+<td class="gt_row gt_right" headers="Q99">1.244</td>
+<td class="gt_row gt_right" headers="Max">2.533</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<p>L’examen des quantiles confirme cette lecture. La médiane est proche de zéro et les différents seuils de la distribution ne font apparaître aucun déplacement global. La dispersion observée ne s’accompagne pas d’un décalage systématique vers des valeurs positives.</p>
+<p>Dans ces conditions, il n’apparaît pas de surperformance agrégée significative. Le contrefactuel ne met pas en évidence de progression d’ensemble au-delà de ce que suggèrent déjà les résultats européens.</p>
+</section>
+<section id="distribution-des-résidus" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="distribution-des-résidus"><span class="header-section-number">4.2</span> Distribution des résidus</h2>
+<p>L’histogramme pondéré des résidus permet de visualiser la structure de cette dispersion. La distribution est centrée sur zéro et présente une forme relativement symétrique, avec une forte concentration des observations autour de la moyenne et des queues plus fines.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>p_residual_hist</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Ce profil est cohérent avec une situation où le modèle rend correctement compte de la majeure partie des observations, et où les écarts restants relèvent essentiellement de variations locales. On n’observe pas de déplacement de la distribution vers la droite qui signalerait une surperformance généralisée.</p>
+<p>La dispersion des résidus traduit donc une hétérogénéité réelle, mais cette hétérogénéité ne prend pas la forme d’une dynamique collective orientée.</p>
+</section>
+<section id="relation-européenne-municipale" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="relation-européenne-municipale"><span class="header-section-number">4.3</span> Relation européenne / municipale</h2>
+<p>Le graphique représentant les résidus en fonction du score LFI aux européennes permet d’examiner directement l’hypothèse d’une amplification dans les territoires déjà favorables.</p>
+<p>Si une dynamique de type « vague » était à l’œuvre, on s’attendrait à observer une relation positive entre le niveau initial et l’écart au contrefactuel, c’est-à-dire une tendance des résidus à augmenter avec le score aux européennes.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>p_residuals_vs_euro</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Or, le nuage de points ne présente pas de structure identifiable. Les observations sont dispersées autour de zéro, sans pente apparente ni concentration particulière des résidus positifs dans les zones de score élevé.</p>
+<p>Ce résultat indique que les communes où LFI obtient des scores élevés aux européennes ne surperforment pas systématiquement aux municipales. La relation entre les deux scrutins ne se traduit pas par une amplification uniforme dans les territoires déjà favorables.</p>
+</section>
+<section id="interprétation" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="interprétation"><span class="header-section-number">4.4</span> Interprétation</h2>
+<p>Les résultats convergent vers une conclusion cohérente :</p>
+<ul>
+<li><p>il n’existe pas de progression agrégée significative une fois prise en compte la relation entre les deux scrutins. Le niveau municipal apparaît globalement conforme à ce que l’on peut attendre à partir du niveau européen.</p></li>
+<li><p>les écarts observés sont distribués de manière symétrique autour de zéro. Ils ne traduisent pas une dynamique collective, mais une dispersion de situations locales.</p></li>
+<li><p>cette dispersion n’est pas structurée par le niveau initial du vote. Les territoires les plus favorables ne présentent pas de surperformance systématique, ce qui exclut l’hypothèse d’une amplification homogène.</p></li>
+</ul>
+<p>Dans ce cadre, <u><strong>l’hypothèse d’une « vague » nationale ne trouve pas de support empirique</strong></u>. La dynamique observée correspond plutôt à une agrégation de trajectoires locales différenciées, où coexistent des situations de surperformance et de sous-performance.</p>
+<p>Cette lecture ne nie pas l’existence de succès locaux, parfois marqués. Elle suggère toutefois que ces succès ne relèvent pas d’un mouvement général, mais de configurations territoriales spécifiques, dont l’analyse relève de l’hétérogénéité plutôt que d’une logique de diffusion uniforme.</p>
+</section>
+</section>
+<section id="hétérogénéité-territoriale" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Hétérogénéité territoriale</h1>
+<p>L’analyse des résidus a montré l’absence de surperformance agrégée et l’existence d’une dispersion des situations locales. Cette section vise à caractériser plus précisément cette hétérogénéité en se plaçant au niveau communal.</p>
+<p>Dans le cadre du modèle retenu, les effets aléatoires permettent de capter deux dimensions distinctes : un effet de niveau, mesuré par l’intercept aléatoire, et un effet de conversion, mesuré par la pente associée au score aux européennes. L’entrée la plus directe pour analyser cette hétérogénéité consiste à examiner la distribution des intercepts communaux.</p>
+<section id="distribution-des-effets-communaux" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="distribution-des-effets-communaux"><span class="header-section-number">5.1</span> Distribution des effets communaux</h2>
+<p>Les intercepts aléatoires représentent l’écart structurel de chaque commune par rapport à la relation moyenne entre les scores européens et municipaux. Une valeur positive indique une surperformance relative, une valeur négative une sous-performance.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>p_ranef_distribution</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>La distribution de ces intercepts est centrée sur zéro, ce qui est attendu, mais présente une dispersion notable. La majorité des communes se situe dans un intervalle relativement resserré autour de la moyenne, tandis qu’une minorité se distingue par des écarts plus marqués.</p>
+<p>Cette configuration suggère que, si la relation moyenne entre les deux scrutins constitue une bonne approximation globale, elle ne rend pas compte de la diversité des situations locales.</p>
+</section>
+<section id="synthèse-1" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="synthèse-1"><span class="header-section-number">5.2</span> Synthèse</h2>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>ranef_summary <span class="sc">|&gt;</span> gt<span class="sc">::</span><span class="fu">gt</span>()</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<div id="rbquvlyqjq" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#rbquvlyqjq table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#rbquvlyqjq thead, #rbquvlyqjq tbody, #rbquvlyqjq tfoot, #rbquvlyqjq tr, #rbquvlyqjq td, #rbquvlyqjq th {
+  border-style: none;
+}
+
+#rbquvlyqjq p {
+  margin: 0;
+  padding: 0;
+}
+
+#rbquvlyqjq .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#rbquvlyqjq .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#rbquvlyqjq .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#rbquvlyqjq .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#rbquvlyqjq .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#rbquvlyqjq .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#rbquvlyqjq .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#rbquvlyqjq .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#rbquvlyqjq .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#rbquvlyqjq .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#rbquvlyqjq .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#rbquvlyqjq .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#rbquvlyqjq .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#rbquvlyqjq .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#rbquvlyqjq .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#rbquvlyqjq .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#rbquvlyqjq .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#rbquvlyqjq .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#rbquvlyqjq .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#rbquvlyqjq .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#rbquvlyqjq .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#rbquvlyqjq .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#rbquvlyqjq .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#rbquvlyqjq .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#rbquvlyqjq .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#rbquvlyqjq .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#rbquvlyqjq .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#rbquvlyqjq .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#rbquvlyqjq .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#rbquvlyqjq .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#rbquvlyqjq .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#rbquvlyqjq .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#rbquvlyqjq .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#rbquvlyqjq .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#rbquvlyqjq .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#rbquvlyqjq .gt_left {
+  text-align: left;
+}
+
+#rbquvlyqjq .gt_center {
+  text-align: center;
+}
+
+#rbquvlyqjq .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#rbquvlyqjq .gt_font_normal {
+  font-weight: normal;
+}
+
+#rbquvlyqjq .gt_font_bold {
+  font-weight: bold;
+}
+
+#rbquvlyqjq .gt_font_italic {
+  font-style: italic;
+}
+
+#rbquvlyqjq .gt_super {
+  font-size: 65%;
+}
+
+#rbquvlyqjq .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#rbquvlyqjq .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#rbquvlyqjq .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#rbquvlyqjq .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#rbquvlyqjq .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#rbquvlyqjq .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#rbquvlyqjq .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#rbquvlyqjq .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#rbquvlyqjq div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-bootstrap="false">
+<thead>
+<tr class="gt_col_headings header">
+<th id="mean" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">mean</th>
+<th id="sd" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">sd</th>
+<th id="min" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">min</th>
+<th id="q01" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">q01</th>
+<th id="q05" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">q05</th>
+<th id="median" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">median</th>
+<th id="q95" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">q95</th>
+<th id="q99" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">q99</th>
+<th id="max" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">max</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_right" headers="mean">1.015785e-13</td>
+<td class="gt_row gt_right" headers="sd">0.5833814</td>
+<td class="gt_row gt_right" headers="min">-1.061398</td>
+<td class="gt_row gt_right" headers="q01">-0.9279478</td>
+<td class="gt_row gt_right" headers="q05">-0.7676802</td>
+<td class="gt_row gt_right" headers="median">-0.09232766</td>
+<td class="gt_row gt_right" headers="q95">1.015814</td>
+<td class="gt_row gt_right" headers="q99">1.844938</td>
+<td class="gt_row gt_right" headers="max">3.156225</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<p>L’examen des quantiles permet de préciser cette dispersion. Les valeurs médianes sont proches de zéro, confirmant l’absence de déplacement global. En revanche, les écarts observés aux extrémités de la distribution indiquent l’existence de communes présentant des performances significativement supérieures.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>ranef_tail <span class="sc">|&gt;</span> gt<span class="sc">::</span><span class="fu">gt</span>()</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<div id="wocxhukfae" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#wocxhukfae table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#wocxhukfae thead, #wocxhukfae tbody, #wocxhukfae tfoot, #wocxhukfae tr, #wocxhukfae td, #wocxhukfae th {
+  border-style: none;
+}
+
+#wocxhukfae p {
+  margin: 0;
+  padding: 0;
+}
+
+#wocxhukfae .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#wocxhukfae .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#wocxhukfae .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#wocxhukfae .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#wocxhukfae .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#wocxhukfae .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#wocxhukfae .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#wocxhukfae .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#wocxhukfae .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#wocxhukfae .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#wocxhukfae .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#wocxhukfae .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#wocxhukfae .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#wocxhukfae .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#wocxhukfae .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#wocxhukfae .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#wocxhukfae .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#wocxhukfae .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#wocxhukfae .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#wocxhukfae .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#wocxhukfae .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#wocxhukfae .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#wocxhukfae .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#wocxhukfae .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#wocxhukfae .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#wocxhukfae .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#wocxhukfae .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#wocxhukfae .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#wocxhukfae .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#wocxhukfae .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#wocxhukfae .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#wocxhukfae .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#wocxhukfae .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#wocxhukfae .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#wocxhukfae .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#wocxhukfae .gt_left {
+  text-align: left;
+}
+
+#wocxhukfae .gt_center {
+  text-align: center;
+}
+
+#wocxhukfae .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#wocxhukfae .gt_font_normal {
+  font-weight: normal;
+}
+
+#wocxhukfae .gt_font_bold {
+  font-weight: bold;
+}
+
+#wocxhukfae .gt_font_italic {
+  font-style: italic;
+}
+
+#wocxhukfae .gt_super {
+  font-size: 65%;
+}
+
+#wocxhukfae .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#wocxhukfae .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#wocxhukfae .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#wocxhukfae .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#wocxhukfae .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#wocxhukfae .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#wocxhukfae .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#wocxhukfae .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#wocxhukfae div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-bootstrap="false">
+<thead>
+<tr class="gt_col_headings header">
+<th id="Top-5%" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Top 5%</th>
+<th id="Top-1%" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Top 1%</th>
+<th id="a>-1σ" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">&gt; 1σ</th>
+<th id="a<--1σ" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">&lt; -1σ</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_right" headers="Top 5%">5.6%</td>
+<td class="gt_row gt_right" headers="Top 1%">3.0%</td>
+<td class="gt_row gt_right" headers="> 1σ">6.0%</td>
+<td class="gt_row gt_right" headers="< -1σ">0.1%</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<p>La distribution apparaît certes relativement symétrique, mais au-delà d’un écart-type, en positif ou négatif, on voit poindre des effets spécifiques aux communes en surperformance.</p>
+<p>Ces communes en surperformance manifeste représentent 6% de l’électorat, ce qui reste faible. A l’inverse, une seule commune (0,1% de l’électorat) présente une sous-performance manifeste.</p>
+</section>
+<section id="communes-en-surperformance" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="communes-en-surperformance"><span class="header-section-number">5.3</span> Communes en surperformance</h2>
+<p>Certaines communes présentent des intercepts nettement positifs. Dans ces cas, le score municipal observé excède celui que l’on attendrait compte tenu du score aux européennes.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>p_top_ranef</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Ces situations correspondent à des configurations locales spécifiques. Cet avantage peut renvoyer à des facteurs variés — ancrage local, structuration militante, configuration de l’offre politique — qui ne sont pas explicitement modélisés ici. Nous pouvons néanmoins décrire un certain nombre d’entre eux:</p>
+<ul>
+<li><p>Faches-Thumesnil : le candidat LFI est le maire sortant, à la tête d’une liste d’union de la gauche.</p></li>
+<li><p>Toulouse : la liste LFI fédère la mouvance altermondialiste et écologiste radicale propre à l’agglomération toulousaine.</p></li>
+<li><p>Yerres : dans le fief de Dupont-Aignan, la gauche part rassemblée, avec un candidat LFI à sa tête.</p></li>
+<li><p>Sotteville-lès-Rouen: ville cheminote de la banlieue de Rouen, la gauche y fait 90%.</p></li>
+<li><p>Roubaix: le candidat LFI est le député actuel de la circonscription, qui a fait de la conquête de la mairie son objectif principal.</p></li>
+<li><p>Saint-Denis : ville historiquement communiste (1944-2020), le candidat LFI est à la tête d’une alliance LFI-PCF pour reprendre la ville conquise par le PS en 2020.</p></li>
+</ul>
+<p>Il est toutefois important de souligner que ces cas, bien que visibles, restent minoritaires. Ils ne suffisent pas à caractériser une dynamique d’ensemble.</p>
+</section>
+<section id="niveau-et-intensité-de-conversion" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="niveau-et-intensité-de-conversion"><span class="header-section-number">5.4</span> <strong>Niveau et intensité de conversion</strong></h2>
+<p>L’analyse des intercepts décrit l’hétérogénéité en niveau. Elle peut être complétée par l’examen des pentes aléatoires, qui mesurent l’intensité de la relation entre les deux scrutins.</p>
+<p>La forte corrélation positive entre intercepts et pentes constitue un résultat central. Elle indique que les communes en surperformance sont également, en moyenne, celles où la conversion du score européen en score municipal est la plus forte.</p>
+<p>Autrement dit, les deux dimensions ne sont pas indépendantes. Les territoires favorables cumulent un niveau élevé et une dynamique de conversion plus intense, tandis que les territoires moins favorables cumulent plus souvent un niveau faible et une conversion atténuée.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>plot_intercept_slope</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>La représentation conjointe des intercepts et des pentes confirme cette structuration. Les observations se distribuent majoritairement le long d’un axe croissant, traduisant une cohérence entre niveau et intensité de conversion.</p>
+</section>
+<section id="interprétation-1" class="level2" data-number="5.5">
+<h2 data-number="5.5" class="anchored" data-anchor-id="interprétation-1"><span class="header-section-number">5.5</span> <strong>Interprétation</strong></h2>
+<p>L’ensemble des résultats conduit à une lecture unifiée de l’hétérogénéité territoriale.</p>
+<p>Les écarts observés ne relèvent ni d’un bruit aléatoire, ni d’une dynamique homogène. Ils s’inscrivent dans une structuration où certaines communes combinent un niveau favorable et une forte capacité de conversion, tandis que d’autres cumulent des caractéristiques inverses.</p>
+<p>Cette configuration est incompatible avec l’hypothèse d’une diffusion uniforme du vote. Elle correspond davantage à une logique de concentration, dans laquelle les dynamiques locales se renforcent là où les conditions sont déjà favorables.</p>
+<p>Ainsi, l’hétérogénéité territoriale ne constitue pas un simple résidu de l’analyse. Elle en est un élément structurant, qui éclaire la nature même de la relation entre les deux scrutins.</p>
+</section>
+</section>
+<section id="conclusion" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Conclusion</h1>
+<section id="résultat-principal" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="résultat-principal"><span class="header-section-number">6.1</span> Résultat principal</h2>
+<p>L’analyse conduite dans ce travail visait à évaluer l’hypothèse d’une percée de La France insoumise aux élections municipales de 2026, en la confrontant à un contrefactuel construit à partir des résultats des élections européennes de 2024.</p>
+<p>Le modèle met en évidence <strong>une relation positive et substantielle entre les deux scrutins</strong>. Le niveau atteint par LFI aux européennes constitue donc un bon prédicteur de son niveau municipal. Toutefois, cette relation est partielle et fortement structurée par des effets communaux, à la fois en niveau et en intensité de conversion.</p>
+<p>L’examen des résidus du modèle constitue le test central de l’hypothèse étudiée. Or, ces résidus ne présentent ni décalage agrégé significatif, ni structure systématique en fonction du niveau initial du vote. Les écarts observés sont distribués de manière symétrique autour de zéro et relèvent d’une dispersion locale.</p>
+<p><u><strong>Les résultats ne permettent pas de valider l’hypothèse d’une progression généralisée au-delà de ce que suggèrent déjà les résultats européens</strong></u>. Le scrutin municipal apparaît globalement conforme à un scénario de prolongement, modéré et territorialisé, du vote observé deux ans plus tôt.</p>
+</section>
+<section id="lecture-politique" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="lecture-politique"><span class="header-section-number">6.2</span> Lecture politique</h2>
+<p><u><strong>Ces résultats conduisent à nuancer le narratif d’une « percée » ou d’une « vague » nationale.</strong></u></p>
+<p>L’absence de surperformance agrégée indique que les performances municipales de LFI ne traduisent pas une dynamique autonome de progression. Elles s’inscrivent pour l’essentiel dans la continuité des rapports de force issus des européennes.</p>
+<p>Par ailleurs, l’hétérogénéité territoriale observée ne prend pas la forme d’une diffusion homogène du vote. Elle correspond à une concentration de communes combinant un niveau élevé et une forte intensité de conversion, tandis que d’autres territoires restent en retrait. <strong>La dynamique observée est donc localisée et cumulative, plutôt que généralisée</strong>.</p>
+<p>Dans ce cadre, les succès municipaux, parfois marqués, ne doivent pas être interprétés comme les manifestations d’un mouvement d’ensemble. Ils relèvent de configurations locales spécifiques, qui ne se traduisent pas par un déplacement global de la distribution des scores.</p>
+<p><u><strong>Le terme de « vague » apparaît inadapté pour décrire la dynamique observée.</strong></u> Il suggère une homogénéité et une diffusion que les données ne confirment pas.</p>
+</section>
+<section id="ouvertures" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="ouvertures"><span class="header-section-number">6.3</span> Ouvertures</h2>
+<p>Ce travail repose sur une approche volontairement parcimonieuse, centrée sur la relation entre deux scrutins et sur la structuration territoriale qui en découle. Si l’analyse a permis de mettre en évidence l’absence de dynamique agrégée et l’importance des configurations locales, plusieurs prolongements restent ouverts.</p>
+<p>Une première piste consiste à approfondir l’analyse des <strong>mécanismes de conversion</strong> du vote européen en vote municipal. Le modèle met en évidence des différences marquées entre communes dans l’intensité de cette relation, sans en identifier les déterminants. L’introduction de variables supplémentaires — sociologiques, institutionnelles ou liées à la structuration partisane — permettrait d’éclairer les facteurs associés à une conversion plus ou moins efficace.</p>
+<p>Une seconde extension concerne la <strong>prise en compte plus explicite de la structure du scrutin municipal</strong>. L’analyse s’est concentrée sur le premier tour et sur une relation directe entre niveaux électoraux, en laissant de côté des éléments tels que les alliances locales, les configurations de listes ou les dynamiques de second tour. Or, ces facteurs peuvent jouer un rôle déterminant dans la traduction du vote en résultats municipaux et contribuer à expliquer une partie de la dispersion observée.</p>
+<p>Une troisième piste porte sur le <strong>raffinement du contrefactuel lui-même</strong>. Le modèle retenu repose sur une spécification relativement simple, qui vise avant tout à tester l’existence d’un décalage global. Des approches plus riches — intégrant par exemple des covariables supplémentaires ou des structures hiérarchiques plus fines — permettraient de tester la robustesse des résultats et de mieux isoler les écarts réellement inexpliqués.</p>
+<p>Enfin, l’approche développée ici pourrait être étendue à d’autres séquences électorales, afin d’évaluer la <strong>portée générale du cadre contrefactuel proposé</strong>. Il serait notamment possible d’examiner si la relation observée entre élections intermédiaires et élections locales présente des régularités comparables dans d’autres contextes, ou si elle dépend fortement des configurations politiques propres à chaque période.</p>
+<p>Ces prolongements ne remettent pas en cause le résultat principal, mais en précisent les conditions d’interprétation : l’absence de « vague » agrégée ne clôt pas l’analyse, elle invite au contraire à déplacer l’attention vers les mécanismes et les configurations qui produisent l’hétérogénéité observée.</p>
+<!-- {{< include _annexes.qmd >}} -->
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copié");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copié");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
