@@ -23,6 +23,7 @@ tar_source("R", change_directory = FALSE)
 # =========================================================
 
 muni_url <- "https://object.files.data.gouv.fr/hydra-parquet/hydra-parquet/1428132c-ad5e-437e-a928-7c2a254e40eb.parquet"
+muni_t2_url <- "https://object.files.data.gouv.fr/hydra-parquet/hydra-parquet/ac97f1d2-64b3-453e-90e6-485913aabd04.parquet"
 euro_url <- "https://www.data.gouv.fr/api/1/datasets/r/cc1883d9-1265-4365-b754-fb6aef22d82e"
 
 top_n <- 20
@@ -43,6 +44,7 @@ list(
   # Paramètres
   # -----------------------------
   tar_target(muni_url_target, muni_url),
+  tar_target(muni_t2_url_target, muni_t2_url),
   tar_target(euro_url_target, euro_url),
   tar_target(top_n_target, top_n),
 
@@ -54,12 +56,20 @@ list(
     read_resultats_municipales_2026(muni_url_target)
   ),
   tar_target(
+    muni_t2_raw,
+    read_resultats_municipales_2026(muni_t2_url_target)
+  ),
+  tar_target(
     euro_raw,
     read_resultats_europeennes_2024(euro_url_target)
   ),
   tar_target(
     muni_data,
     build_objects(muni_raw)
+  ),
+  tar_target(
+    muni_t2_data,
+    build_objects(muni_t2_raw)
   ),
   tar_target(
     euro_data,
