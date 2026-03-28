@@ -24,7 +24,10 @@ cf_formulas <- list(
   C_ortho = municipales_s ~
     europeennes_s * gauche_orth +
     log_bureau_s + log_commune_s +
-    (1 + europeennes_s | code_ville)
+    (1 + europeennes_s | code_ville),
+  rand_int = municipales_s ~ 0 + europeennes_s * gauche_orth +
+    log_bureau_s +
+    (1 + europeennes_s + europeennes_s:gauche_orth | code_ville)
 )
 
 # =========================================================

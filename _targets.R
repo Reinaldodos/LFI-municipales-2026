@@ -28,12 +28,15 @@ euro_url <- "https://www.data.gouv.fr/api/1/datasets/r/cc1883d9-1265-4365-b754-f
 
 top_n <- 20
 
-liste_models <- c("A")
+liste_models <- c("A", "C_no_VIF", "C_ortho", "rand_int")
 
 model_grid <- tibble::tibble(
   model_name = liste_models,
   formula_name = liste_models
 )
+
+model_grid_ranef <- model_grid |>
+  dplyr::filter(!model_name %in% c("C_no_VIF", "rand_int"))
 
 # =========================================================
 # Pipeline
@@ -115,6 +118,7 @@ list(
 
   # -----------------------------
   # Branching statique sur les spécifications
+  # Cibles communes à tous les modèles
   # -----------------------------
   tar_map(
     values = model_grid,
@@ -207,28 +211,37 @@ list(
       plot_bottom_ranef_communes(re_all, n = top_n_target)
     ),
     tar_target(
-      commune_random_effects,
-      extract_commune_random_effects(
-        model = model_fit,
-        bureaux = muni_data$bureaux
-      )
-    ),
-    tar_target(
-      plot_intercept_slope,
-      plot_commune_intercept_slope(
-        df_re = commune_random_effects,
-        n_labels = 10,
-        caption_width = 65,
-        highlight_communes = c("Brest", "Saint-Denis", "Toulouse", "Roubaix")
-      )
-    ),
-    tar_target(
       publication_bundle,
       list(
         residuals = format_residual_summary(residual_summary),
         ranef = format_ranef_tail(ranef_tail_weights),
         plot_main = p_ranef_distribution
       )
+    )
+  ),
+
+  # -----------------------------
+  # Branching statique sur les spécifications
+  # Cibles exclues pour C_no_VIF
+  # -----------------------------
+  tar_map(
+    values = model_grid_ranef,
+    names = model_name,
+    unlist = TRUE,
+    tar_target(
+      model_fit_ranef,
+      fit_model(base_cf, cf_formulas[[formula_name]])
+    ),
+    tar_target(
+      commune_random_effects,
+      extract_commune_random_effects(
+        model = model_fit_ranef,
+        bureaux = base_cf
+      )
+    ),
+    tar_target(
+      plot_intercept_slope,
+      plot_commune_intercept_slope(commune_random_effects)
     )
   )
 )

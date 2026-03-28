@@ -185,5 +185,9 @@ build_base_cf <- function(muni_data, euro_data) {
       dominance_LFI_euro_s = standardize_numeric(dominance_LFI_euro),
       log_bureau_s = standardize_numeric(log_bureau),
       log_commune_s = standardize_numeric(log_commune)
+    ) |>
+    mutate(
+      gauche_orth = resid(lm(gauche_euro_s ~ europeennes_s)),
+      LFI_orth    = resid(lm(dominance_LFI_euro_s ~ europeennes_s))
     )
 }
