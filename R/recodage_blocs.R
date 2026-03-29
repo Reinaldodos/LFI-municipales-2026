@@ -19,8 +19,8 @@ recode_bloc_nuance <- function(x) {
     x %in% c("LRN", "LEXD", "LUXD", "LUDR") ~ "extreme_droite",
 
     # Divers / NA
-    x %in% c("LDIV", "NA") ~ "divers",
-    TRUE ~ "divers"
+    x %in% c("LDIV", NA) ~ "divers",
+    .default = x
   )
 }
 
