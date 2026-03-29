@@ -27,6 +27,10 @@ cf_formulas <- list(
     (1 + europeennes_s | code_ville),
   rand_int = municipales_s ~ 0 + europeennes_s * gauche_orth +
     log_bureau_s +
+    (1 + europeennes_s + europeennes_s:gauche_orth | code_ville),
+  rand_int_no_gauche = municipales_s ~ 0 + europeennes_s * gauche_orth +
+    no_gauche +
+    log_bureau_s +
     (1 + europeennes_s + europeennes_s:gauche_orth | code_ville)
 )
 

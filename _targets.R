@@ -28,7 +28,7 @@ euro_url <- "https://www.data.gouv.fr/api/1/datasets/r/cc1883d9-1265-4365-b754-f
 
 top_n <- 20
 
-liste_models <- c("A", "C_no_VIF", "C_ortho", "rand_int")
+liste_models <- c("A", "C_no_VIF", "C_ortho", "rand_int", "rand_int_no_gauche")
 
 model_grid <- tibble::tibble(
   model_name = liste_models,
@@ -36,7 +36,7 @@ model_grid <- tibble::tibble(
 )
 
 model_grid_ranef <- model_grid |>
-  dplyr::filter(!model_name %in% c("C_no_VIF", "rand_int"))
+  dplyr::filter(model_name %in% c("A", "C_ortho"))
 
 # =========================================================
 # Pipeline

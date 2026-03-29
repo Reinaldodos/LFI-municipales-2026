@@ -189,5 +189,6 @@ build_base_cf <- function(muni_data, euro_data) {
     mutate(
       gauche_orth = resid(lm(gauche_euro_s ~ europeennes_s)),
       LFI_orth    = resid(lm(dominance_LFI_euro_s ~ europeennes_s))
-    )
+    ) |>
+    create_no_gauche(muni_data = muni_data)
 }
