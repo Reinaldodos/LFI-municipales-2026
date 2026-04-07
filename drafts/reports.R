@@ -74,7 +74,7 @@ selection <-
   nb_bdv_par_ville |>
   slice_max(order_by = nb_bdv, n = 30)
 
-
+source("drafts/ecological_inference_regularized.R")
 future::plan(
   strategy = "multisession",
   workers = future::availableCores() - 1
@@ -82,6 +82,7 @@ future::plan(
 
 output <-
   resultats |>
+  semi_join(y = nb_bdv_par_ville, by = join_by(code_ville)) |>
   # semi_join(y = selection, by = join_by(code_ville)) |>
   group_nest(code_ville, keep = TRUE) |>
   mutate(mod_flux = furrr::future_map(
@@ -99,7 +100,8 @@ output |>
   mutate(
     # reports = map(.x = mod_flux, .f = get_reports),
     flux_voix = pmap(
-      .f = get_flux_voix, .l = list(
+      .f = get_flux_voix,
+      .l = list(
         resultats = data,
         mod_flux = mod_flux
       ),
@@ -107,13 +109,4 @@ output |>
     )
   ) |>
   inner_join(x = villes, by = join_by(code_ville)) |>
-  saveRDS(file = "output/reports.rds")
-
-"output/reports.rds" |>
-  readRDS() |>
-  pluck("flux_voix", 53) |>
-  plot_sankey_networkD3(
-    palette_nuances = palette_bloc,
-    seuil_flux = 10,
-    regrouper_non_exprimes = TRUE
-  )
+  saveRDS(file = "sankey_app/data/reports.rds")
