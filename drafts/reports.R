@@ -74,7 +74,7 @@ selection <-
   nb_bdv_par_ville |>
   slice_max(order_by = nb_bdv, n = 30)
 
-source("drafts/ecological_inference_regularized.R")
+source("drafts/functions_report.R")
 future::plan(
   strategy = "multisession",
   workers = future::availableCores() - 1
